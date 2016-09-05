@@ -12,7 +12,8 @@
     cn.dongyeshengzhen.portal.*.web,
     cn.dongyeshengzhen.portal.*.service,
     cn.dongyeshengzhen.framework.*.web,
-    cn.dongyeshengzhen.framework.*.service"/>
+    cn.dongyeshengzhen.framework.*.service,
+    cn.dongyeshengzhen.framework.web.builder"/>
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
             <list>

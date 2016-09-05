@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><sitemesh:title></sitemesh:title>-我的私有云-dysz</title>
+    <title><sitemesh:title></sitemesh:title>dysz</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -33,93 +33,9 @@
     </style>
 </head>
 <body bgcolor="#F0F0F0">
-<div class="navbox">
-    <div class="header_bg">
-        <div class="container header">
-            <a href="http://www.creawor.com/index.aspx" class="logo"><img src="./创我科技_files/logo.png"></a>
-            <dl class="nav">
-                <dt class="nav_a">
-                    <a href="http://www.creawor.com/index.aspx" id="nav01">首页</a>
-                    <a href="http://www.creawor.com/content.aspx?cateId=56" id="nav02" class="nav_a_selected">产品与服务</a>
-                    <a href="http://www.creawor.com/content.aspx?cateId=97" id="nav03">解决方案</a>
-                    <a href="http://www.creawor.com/content.aspx?cateId=66" id="nav04">成功案例</a>
-                    <a href="http://www.creawor.com/content.aspx?cateId=69" id="nav05">关于创我</a>
-                    <a href="http://www.creawor.com/join.aspx" id="nav06">加入创我</a>
-                </dt>
-                <dd class="nav_search">
-                    <input type="text" id="searchText">
-                    <button onclick="btnSearchClick()">搜索</button>
-                </dd>
-            </dl>
-            <div class="menuhide">
-                <i class="icon_menu"></i>
-                <div>
-                    <p>
-                        <input type="text" id="searchText2" placeholder="请输入内容">
-                        <button type="button" onclick="btnSearchClick2()">搜索</button>
-                    </p>
-                    <a href="http://www.creawor.com/index.aspx">首页</a>
-					<span class="menuhide_span">产品与服务
-						<h1 style="display: none;">
 
-                            <a href="http://www.creawor.com/content.aspx?cateId=56">大数据+</a>
+            <d:menu></d:menu>
 
-                            <a href="http://www.creawor.com/content.aspx?cateId=57">电信行业产品</a>
-
-                            <a href="http://www.creawor.com/content.aspx?cateId=58">公共安全产品</a>
-
-                            <a href="http://www.creawor.com/content.aspx?cateId=59">金融证券产品</a>
-
-                            <a href="http://www.creawor.com/content.aspx?cateId=60">运营服务</a>
-
-                        </h1>
-					</span>
-					<span class="menuhide_span">解决方案
-						<h1 style="display: none;">
-
-                            <a href="http://www.creawor.com/content.aspx?cateId=97">技术优势</a>
-
-                            <a href="http://www.creawor.com/content.aspx?cateId=64">政府行业</a>
-
-                            <a href="http://www.creawor.com/content.aspx?cateId=61">金融行业</a>
-
-                            <a href="http://www.creawor.com/content.aspx?cateId=65">娱乐媒体</a>
-
-                        </h1>
-					</span>
-					<span class="menuhide_span">成功案例
-						<h1 style="display: none;">
-
-                            <a href="http://www.creawor.com/content.aspx?cateId=66">电信行业</a>
-
-                            <a href="http://www.creawor.com/content.aspx?cateId=98">公共安全</a>
-
-                            <a href="http://www.creawor.com/content.aspx?cateId=68">娱乐媒体</a>
-
-                        </h1>
-					</span>
-					<span class="menuhide_span">关于创我
-						<h1 style="display: none;">
-
-                            <a href="http://www.creawor.com/content.aspx?cateId=69">公司简介</a>
-
-                            <a href="http://www.creawor.com/content.aspx?cateId=70">发展历程</a>
-
-                            <a href="http://www.creawor.com/content.aspx?cateId=71">企业文化</a>
-
-                            <a href="http://www.creawor.com/infonews.aspx">新闻中心</a>
-
-                            <a href="http://www.creawor.com/content.aspx?cateId=74">合作伙伴</a>
-
-                            <a href="http://www.creawor.com/content.aspx?cateId=75">联系我们</a>
-
-                        </h1>
-					</span>
-                    <a href="http://www.creawor.com/join.aspx">加入创我</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <sitemesh:body></sitemesh:body>
