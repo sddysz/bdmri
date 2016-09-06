@@ -22,6 +22,8 @@ public class Menu {
     private String name;
     private String displayName;
     private Integer order;
+    private String url;
+    private Integer display_footer;
 
     @JsonIgnore
     @OneToMany(fetch = FetchType.EAGER)
@@ -67,5 +69,21 @@ public class Menu {
 
     public void setOrder(Integer order) {
         this.order = order;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public Integer getDisplay_footer() {
+        return display_footer;
+    }
+
+    public void setDisplay_footer(Integer display_footer) {
+        this.display_footer = display_footer;
     }
 }

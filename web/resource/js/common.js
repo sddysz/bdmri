@@ -1,33 +1,13 @@
 $(function(){
 	//主导航
-	$("#nav01").mouseover(function(){
+	$(".singleNav").mouseover(function(){
 		$(".navhidebg").slideUp(500);
 	});
-	$("#nav02").mouseover(function(){
+	$(".mainNav").mouseover(function(){
+		var navId=$(this)[0].id;
 		$(".navhide div").hide();
-		$(".navhide div").eq(1).show();
+		$(".navhide div[for='"+navId+"']").show();
 		$(".navhidebg").slideDown(500);
-	});
-	$("#nav03").mouseover(function(){
-		$(".navhide div").hide();
-		$(".navhide div").eq(2).show();
-		$(".navhidebg").slideDown(500);
-	});
-	$("#nav04").mouseover(function(){
-		$(".navhide div").hide();
-		$(".navhide div").eq(3).show();
-		$(".navhidebg").slideDown(500);
-	});
-	$("#nav05").mouseover(function(){
-		$(".navhide div").hide();
-		$(".navhide div").eq(4).show();
-		$(".navhidebg").slideDown(500);
-	});
-	$("#nav06").mouseover(function(){
-		//$(".navhide div").hide();
-		//$(".navhide div").eq(5).show();
-	    //$(".navhidebg").slideDown(500);
-	    $(".navhidebg").slideUp(500);
 	});
 	$(".navbox").mouseleave(function(){
 		$(".navhidebg").slideUp(500)

@@ -14,7 +14,7 @@ public class FirstPageController {
      * 登录成功后系统首页
      * @return
      */
-    @RequestMapping(value = "/" ,method= RequestMethod.GET)
+    @RequestMapping(value = "/index" ,method= RequestMethod.GET)
     public String index() {
         return "index";
     }

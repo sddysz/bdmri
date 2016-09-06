@@ -5,14 +5,11 @@ import cn.dongyeshengzhen.framework.security.service.MenuManager;
 import cn.dongyeshengzhen.framework.web.TagBuilder;
 import cn.dongyeshengzhen.framework.web.TagDTO;
 import cn.dongyeshengzhen.portal.content.entity.ContentType;
-import org.apache.commons.lang.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.WebApplicationContext;
 
 import javax.servlet.ServletContext;
 import java.util.List;
-import java.util.Map;
 
 /**
  * 自定义菜单标签处理类。 根据当前认证实体获取允许访问的所有菜单，并输出特定导航菜单的html
@@ -21,7 +18,7 @@ import java.util.Map;
  * @since 0.1
  */
 @Component
-public class MenuTagBuilder implements TagBuilder {
+public class FooterTagBuilder implements TagBuilder {
     // Spring的上下文
     private WebApplicationContext springContext;
     // Servlet的上下文
@@ -37,12 +34,12 @@ public class MenuTagBuilder implements TagBuilder {
         MenuManager menuManager = springContext.getBean(MenuManager.class);
         StringBuffer buffer = new StringBuffer();
         List<Menu> menuList = menuManager.findAll();
-        buffer.append("<div class='navbox'>");
+        buffer.append("<div class=\"frilinkbg\">\n  <div class=\"container frilink\">");
 
 
-        buffer.append(buildNav(menuList)).append("<div class='hide80px'></div>").append(buildNavhidebg(menuList));
+        buffer.append(buildNav(menuList));
 
-        buffer.append("</div>");
+        buffer.append("</div>\n </div>");
         // 获取所有可允许访问的菜单列表
         // 循环迭代菜单列表，构成ID、List结构的Map
         // 根据Map构造符合左栏菜单显示的html
@@ -50,7 +47,7 @@ public class MenuTagBuilder implements TagBuilder {
         return buffer.toString();
     }
 
-    String buildNav(List<Menu> menus) {
+    String buildContact(List<Menu> menus) {
         StringBuffer buffer = new StringBuffer();
         buffer.append("<div class='header_bg'>");
         buffer.append("<div class='container header'>");
@@ -76,25 +73,26 @@ public class MenuTagBuilder implements TagBuilder {
         return buffer.toString();
     }
 
-    String buildNavhidebg(List<Menu> menus) {
+    String buildNav(List<Menu> menus) {
         StringBuffer buffer = new StringBuffer();
-        buffer.append("<div class='navhidebg' >\n" +
-                "<div class='container navhide'>\n");
+        buffer.append("<ul class=\"fri_l\">");
 
 
         for (int i = 0; i < menus.size(); i++) {
             StringBuffer hideMenuBuffer = new StringBuffer();
             Menu m = menus.get(i);
-            hideMenuBuffer.append("<div for='nav" + m.getId() + "'>");
+            if (m.getDisplay_footer() == null || m.getDisplay_footer().equals(0)) {
+                continue;
+            }
+            hideMenuBuffer.append("<li>\n<h1>" + m.getDisplayName() + "</h1>");
             for (int j = 0; j < m.getContentTypeList().size(); j++) {
                 ContentType c = m.getContentTypeList().get(j);
-                hideMenuBuffer.append("<a>" + c.getDisplayName() + "</a>");
+                hideMenuBuffer.append("<div><a href=\"#\">" + c.getDisplayName() + "</a></div>");
             }
-            hideMenuBuffer.append("</div>");
+            hideMenuBuffer.append("</li>");
             buffer.append(hideMenuBuffer);
         }
-        buffer.append("</div>" +
-                "</div>");
+        buffer.append("</ul>");
 
         return buffer.toString();
     }

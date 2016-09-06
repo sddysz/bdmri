@@ -13,7 +13,9 @@ public class Content {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String title;
-    private Integer typeId;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "id")
+    private ContentType type;
     private String content;
     private Integer order;
     private Date createTime;
@@ -35,12 +37,12 @@ public class Content {
         this.title = title;
     }
 
-    public Integer getTypeId() {
-        return typeId;
+    public ContentType getType() {
+        return type;
     }
 
-    public void setTypeId(Integer typeId) {
-        this.typeId = typeId;
+    public void setType(ContentType type) {
+        this.type = type;
     }
 
     public String getContent() {
