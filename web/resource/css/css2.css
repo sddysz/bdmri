@@ -101,7 +101,7 @@ h3 {
 .slides li img{width:100%;display: block;}
 .flex-control-nav{position:absolute;bottom:10px;z-index:2;width:100%;text-align:center;}
 .flex-control-nav li{display:inline-block;width:14px;height:14px;margin:0 5px;*display:inline;zoom:1;}
-.flex-control-nav a{display:inline-block;width:13px;height:13px;line-height:40px;overflow:hidden;background:url(../images/dot.png) right 0 no-repeat;cursor:pointer;}
+.flex-control-nav a{display:inline-block;width:13px;height:13px;line-height:40px;overflow:hidden;background:url(../image/dot.png) right 0 no-repeat;cursor:pointer;}
 .flex-control-nav .flex-active{background-position:0 0;}
 
 .flex-direction-nav{position:absolute;z-index:3;width:100%;top:45%;}
@@ -200,7 +200,7 @@ h3 {
 	content: "";
 	width: 430px;
 	height: 57px;
-	background: url(../images/newsbg.png) no-repeat;
+	background: url(../image/newsbg.png) no-repeat;
 	background-size: 100% 100%;
 	right: 0;
 	top: 0;
@@ -211,7 +211,7 @@ h3 {
 	content: "";
 	width: 182px;
 	height: 78px;
-	background: url(../images/flownewsbg.jpg) no-repeat;
+	background: url(../image/flownewsbg.jpg) no-repeat;
 	position: absolute;
 	z-index: 0;
 	left: -1px;
@@ -239,22 +239,22 @@ h3 {
     cursor:pointer;
 }
 .i_pic01{
-	background: url(../images/product_banner01.jpg);
+	background: url(../image/product_banner01.jpg);
 }
 .i_pic02{
-	background: url(../images/product_banner02.jpg);
+	background: url(../image/product_banner02.jpg);
 }
 .i_pic03{
-	background: url(../images/product_banner03.jpg);
+	background: url(../image/product_banner03.jpg);
 }
 .i_pic04{
-	background: url(../images/solution_banner01.jpg);
+	background: url(../image/solution_banner01.jpg);
 }
 .i_pic05{
-	background: url(../images/solution_banner02.jpg);
+	background: url(../image/solution_banner02.jpg);
 }
 .i_pic06{
-	background: url(../images/solution_banner03.jpg);
+	background: url(../image/solution_banner03.jpg);
 }
 .i_content li a{
 	font-size: 22px;
@@ -285,7 +285,7 @@ h3 {
 	display: block;
 	width: 100%;
 	height: 78px;
-	background: url(../images/zhezhao.png);
+	background: url(../image/zhezhao.png);
 	background-size: 100% 100%;
 	position: absolute;
 	left: 0;
@@ -441,7 +441,7 @@ h3 {
     font-size: 14px;
 }
 .subnav2Selection {
-    background-image:url(../images/content_navbg.png);
+    background-image:url(../image/content_navbg.png);
     color:white;
 }
 .subnav{
@@ -486,26 +486,26 @@ br{font-size:initial;}
 	content: "";
 	width: 100%;
 	height: 12px;
-	background: url(../images/shadow01.png);
+	background: url(../image/shadow01.png);
 	background-size: 100% 100%;
 	position: absolute;
 	bottom:-12px;
 	left: 0;
 }
 .rightbar:after{
-	background: url(../images/shadow02.png);
+	background: url(../image/shadow02.png);
 }
 .menubg{
 	width: 270px;
 	height: 143px;
-	background: url(../images/contentbg.png);
+	background: url(../image/contentbg.png);
 }
 .leftbar ul{
 	min-height: 240px;
 	padding: 40px 0 0 30px;
 }
 .leftbar ul li{
-	list-style-image: url(../images/list_style01.png);
+	list-style-image: url(../image/list_style01.png);
 	list-style-position: inside;
 	margin-bottom: 26px;
 }
@@ -599,7 +599,7 @@ br{font-size:initial;}
 }
 .c01_left_menu li{
 	margin-bottom: 16px;
-	list-style-image: url(../images/list_style01.png);
+	list-style-image: url(../image/list_style01.png);
 	list-style-position: inside;
 }
 .c01_left_menu li a{
@@ -680,7 +680,7 @@ br{font-size:initial;}
 	content: "";
 	width: 100%;
 	height: 100px;
-	background: url(../images/zhezhao.png);
+	background: url(../image/zhezhao.png);
 	background-size: 100% 100%;
 	position: absolute;
 	left: 0;
@@ -748,9 +748,9 @@ br{font-size:initial;}
 }
 
 .infonews01 li{
-	list-style-image: url(../images/square.jpg);
+	list-style-image: url(../image/square.jpg);
 	list-style-position: inside;
-	background: url(../images/dot01.png) center;
+	background: url(../image/dot01.png) center;
 	margin-bottom: 22px;
 	font-size: 14px;
 	line-height: 14px;
@@ -984,7 +984,7 @@ br{font-size:initial;}
 	.navhide div a{margin: 0 18px;}
 	.nav{display: none;}
 	.menuhide{float: right; display: block; margin: 14px 0;}
-	.icon_menu{width: 30px; height: 28px; display: block; background: url(../images/icon_menu.png); cursor: pointer;}
+	.icon_menu{width: 30px; height: 28px; display: block; background: url(../image/icon_menu.png); cursor: pointer;}
 	.menuhide div{position: absolute; top: 80px; left: 0; width: 100%; z-index: 999; box-shadow: rgba(0,0,0,0.5) 0 2px 5px; display: none;}
 	.menuhide div p{background: #f0f0f0; padding: 5px 2%; overflow: hidden;}
 	.menuhide div p input{font-size: 14px; border:solid 1px #ccc; height: 30px; line-height: 30px; float: left; width: 68%; padding: 0 2%;}
@@ -1006,16 +1006,16 @@ br{font-size:initial;}
 	.fri_r img{margin-right: 0; margin-top: 20px;}
 	.slides li img{display: none}
 	.slides li{height: 184px;}
-	.slides li:nth-of-type(1){background: url(../images/banner1_m.jpg) no-repeat; background-size:100% auto ;}
-	.slides li:nth-of-type(2){background: url(../images/banner2_m.jpg) no-repeat; background-size:100% auto ;}
-	.slides li:nth-of-type(3){background: url(../images/banner3_m.jpg) no-repeat; background-size:100% auto ;}
-    .slides li:nth-of-type(4){background: url(../images/banner4_m.jpg) no-repeat; background-size:100% auto ;}
+	.slides li:nth-of-type(1){background: url(../image/banner1_m.jpg) no-repeat; background-size:100% auto ;}
+	.slides li:nth-of-type(2){background: url(../image/banner2_m.jpg) no-repeat; background-size:100% auto ;}
+	.slides li:nth-of-type(3){background: url(../image/banner3_m.jpg) no-repeat; background-size:100% auto ;}
+    .slides li:nth-of-type(4){background: url(../image/banner4_m.jpg) no-repeat; background-size:100% auto ;}
 	.leftbar{width: 100%; margin-right: 0; margin: 12px 0;}
 	.leftbar ul{min-height: 0; padding: 0 20px;}
 	.leftbar ul li{line-height: 50px; margin-bottom: 0;}
 	.menubg{display: none;}
 	.rightbar{width: 90%; padding: 5%;}
-	.icon_downarrow{width: 30px; height: 50px; display: block; float: right; background: url(../images/icon_arrowd.png) center no-repeat; cursor: pointer;}
+	.icon_downarrow{width: 30px; height: 50px; display: block; float: right; background: url(../image/icon_arrowd.png) center no-repeat; cursor: pointer;}
 	.subnav{display: none;}
 	.hideleftbar{display: none;}
 	.c01_left{display: none;}

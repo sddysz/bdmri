@@ -54,7 +54,7 @@ public class MenuTagBuilder implements TagBuilder {
         StringBuffer buffer = new StringBuffer();
         buffer.append("<div class='header_bg'>");
         buffer.append("<div class='container header'>");
-        buffer.append("<a></a>");
+        buffer.append("<a href=\"/\" class=\"logo\"><img src=\"/resource/image/logo.png\"></a>");
         buffer.append("<dl class='nav'>" +
                 "<dt class='nav_a'>");
 
@@ -72,14 +72,14 @@ public class MenuTagBuilder implements TagBuilder {
 
         }
         buffer.append("</dt> </dl>");
+        buffer.append(buildNavhide(menus));
         buffer.append("</div> </div>");
         return buffer.toString();
     }
 
     String buildNavhidebg(List<Menu> menus) {
         StringBuffer buffer = new StringBuffer();
-        buffer.append("<div class='navhidebg' >\n" +
-                "<div class='container navhide'>\n");
+        buffer.append("<div class='navhidebg' >\n").append("<div class='container navhide'>\n");
 
 
         for (int i = 0; i < menus.size(); i++) {
@@ -95,6 +95,31 @@ public class MenuTagBuilder implements TagBuilder {
         }
         buffer.append("</div>" +
                 "</div>");
+
+        return buffer.toString();
+    }
+
+    String buildNavhide(List<Menu> menus) {
+        StringBuffer buffer = new StringBuffer();
+        buffer.append("<div class=\"menuhide\">\n <i class=\"icon_menu\"></i>\n <div>");
+
+
+        for (int i = 0; i < menus.size(); i++) {
+            StringBuffer hideMenuBuffer = new StringBuffer();
+            Menu m = menus.get(i);
+            if (m.getContentTypeList().isEmpty()) {
+                buffer.append("<a href=\"").append(m.getUrl()).append("\">").append(m.getDisplayName()).append("</a>");
+            } else {
+                hideMenuBuffer.append("<span class=\"menuhide_span\">").append(m.getDisplayName()).append("<h1 style=\"display: none;\">");
+                for (int j = 0; j < m.getContentTypeList().size(); j++) {
+                    ContentType c = m.getContentTypeList().get(j);
+                    hideMenuBuffer.append("<a>" + c.getDisplayName() + "</a>");
+                }
+                hideMenuBuffer.append("</h1>\n </span>");
+                buffer.append(hideMenuBuffer);
+            }
+        }
+        buffer.append("</div> \n </div>");
 
         return buffer.toString();
     }

@@ -29,9 +29,9 @@ $(function(){
 	$(".menu_selected").show();
 	$(".icon_downarrow").toggle(function(){
 		$(".hideleftbar").slideDown(200);
-		$(".icon_downarrow").css("background","url(./images/icon_arrowu.png) center no-repeat");
+		$(".icon_downarrow").css("background","url(/image/icon_arrowu.png) center no-repeat");
 	},function(){
 		$(".menu_selected").siblings().slideUp(200);
-		$(".icon_downarrow").css("background","url(./images/icon_arrowd.png) center no-repeat");
+		$(".icon_downarrow").css("background","url(/image/icon_arrowd.png) center no-repeat");
 	})
 });

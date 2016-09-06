@@ -167,6 +167,38 @@
                 bt.hide();
             }
         });
-    })</script>
-</body>
-</html>
+    })
+</script>
+<script>
+
+        var _cId = 16;
+        var _cateId = 56;
+        var _inId = "0";
+        $(function () {
+            if (_cId == 16) {
+                $("#topImg").css("display", "none");
+            }
+            //if (_cId == 19) {
+            //    $("#subnav2").css("display","none");
+            //}
+
+            $("#subnav2Div" + _cateId).addClass("subnav2Selection");
+        function changeSelectSubNav2(_id) {
+            if (_id == 72) {
+                location.href = "infonews.aspx";
+            } else {
+                location.href = "content.aspx?cateId=" + _id;
+            }
+        }
+
+        function ToggleCode(obj, codeurl) {
+            $(obj).children("img").eq(0).attr("src", codeurl + "?time=" + Math.random());
+            return false;
+        }
+
+
+
+    </script>
+
+</body >
+</html >
