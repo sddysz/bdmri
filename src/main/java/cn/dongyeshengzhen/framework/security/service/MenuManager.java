@@ -4,8 +4,13 @@ import cn.dongyeshengzhen.framework.security.dao.MenuDao;
 import cn.dongyeshengzhen.framework.security.entity.Menu;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 import java.util.List;
 
 /**
@@ -18,8 +23,16 @@ public class MenuManager {
 
 
     public List<Menu> findAll() {
-        Sort sort=new Sort(Sort.Direction.ASC,"order");
+        Sort sort = new Sort(Sort.Direction.ASC, "order");
         return menuDao.findAll(sort);
+    }
+
+    public Menu findOne(Integer id) {
+        return menuDao.findOne(id);
+    }
+
+    public Menu findOne(String name) {
+        return menuDao.findByName(name);
     }
 
 }

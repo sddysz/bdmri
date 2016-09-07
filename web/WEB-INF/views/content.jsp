@@ -49,24 +49,19 @@
         <ul>
             <li class="menu_selected"><a>大数据+</a><i class="icon_downarrow"></i></li>
             <h1 id="ContentList" class="hideleftbar">
+                <c:forEach items="${contentList}" var="item">
                 <li><a id="leftbarItem172" href="javascript:void(0);" onclick="showDetail(172)"
-                       class="leftbarList hideleftbar_selected">“大数据＋”概述</a></li>
-                <li><a id="leftbarItem173" href="javascript:void(0);" onclick="showDetail(173)" class="leftbarList">“健坤”大数据平台</a>
-                </li>
-                <li><a id="leftbarItem245" href="javascript:void(0);" onclick="showDetail(245)" class="leftbarList">“穿山甲”互联网信息采集与分析系统</a>
-                </li>
-                <li><a id="leftbarItem198" href="javascript:void(0);" onclick="showDetail(198)" class="leftbarList">“灵狐”大数据可视化系统</a>
-                </li>
-                <li><a id="leftbarItem174" href="javascript:void(0);" onclick="showDetail(174)"
-                       class="leftbarList">创我云</a></li>
+                       class="leftbarList <c:if test="${item.id eq content.id}" >hideleftbar_selected</c:if>">${item.type.displayName}</a></li>
+                </c:forEach>
+
             </h1>
         </ul>
         <div class="menubg"></div>
     </div>
     <div id="divContent" class="rightbar"><h1>
-        <span style="line-height:1.5;"><span style="line-height:1;"></span><span style="font-family:'Microsoft YaHei';">“大数据+” 概述</span></span>
+        <span style="line-height:1.5;"><span style="line-height:1;"></span><span style="font-family:'Microsoft YaHei';">${content.title}</span></span>
     </h1>
-
+     ${content.content}
     </div>
 </div>
 </body>
