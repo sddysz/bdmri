@@ -11,6 +11,7 @@
     <context:component-scan base-package="
     cn.dongyeshengzhen.portal.*.web,
     cn.dongyeshengzhen.portal.*.service,
+    cn.dongyeshengzhen.portal.*.dao,
     cn.dongyeshengzhen.framework.*.web,
     cn.dongyeshengzhen.framework.*.service,
     cn.dongyeshengzhen.framework.web.builder"/>
@@ -30,7 +31,7 @@
     </bean>
 
     <jpa:repositories
-            base-package="cn.dongyeshengzhen.framework.*"
+            base-package="cn.dongyeshengzhen.**"
             repository-impl-postfix="Impl"
             entity-manager-factory-ref="defaultEntityManagerFactory"
             transaction-manager-ref="transactionManagerMySql">

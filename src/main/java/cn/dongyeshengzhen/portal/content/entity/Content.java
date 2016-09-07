@@ -14,7 +14,7 @@ public class Content {
     private Integer id;
     private String title;
     @ManyToOne(optional = false)
-    @JoinColumn(name = "id",insertable = false,updatable = false)
+    @JoinColumn(name = "typeId",insertable = false,updatable = false)
     private ContentType type;
     private String content;
     private Integer order;

@@ -5,9 +5,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * Created by dongye on 2016/9/4.
  */
 @Repository
-public interface contentDao extends JpaRepository<Content, Integer>, JpaSpecificationExecutor<Content> {
+public interface ContentDao extends JpaRepository<Content, Integer>, JpaSpecificationExecutor<Content> {
 }

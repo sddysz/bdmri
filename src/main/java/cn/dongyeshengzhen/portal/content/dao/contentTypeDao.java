@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
  * Created by dongye on 2016/9/4.
  */
 @Repository
-public interface contentTypeDao extends JpaRepository<ContentType, Integer>, JpaSpecificationExecutor<ContentType> {
+public interface ContentTypeDao extends JpaRepository<ContentType, Integer>, JpaSpecificationExecutor<ContentType> {
 }

@@ -1,5 +1,7 @@
 package cn.dongyeshengzhen.portal.content.entity;
 
+import cn.dongyeshengzhen.framework.security.entity.Menu;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -14,7 +16,9 @@ public class ContentType {
     private Integer id;
     private String name;
     private String displayName;
-    private Integer navId;
+    @ManyToOne
+    @JoinColumn(name = "navId")
+    private Menu menu;
     private Integer order;
     private Date createTime;
     private Date updateTime;
@@ -44,12 +48,12 @@ public class ContentType {
         this.displayName = displayName;
     }
 
-    public Integer getNavId() {
-        return navId;
+    public Menu getMenu() {
+        return menu;
     }
 
-    public void setNavId(Integer navId) {
-        this.navId = navId;
+    public void setMenu(Menu menu) {
+        this.menu = menu;
     }
 
     public Integer getOrder() {

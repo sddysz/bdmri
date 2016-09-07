@@ -25,10 +25,8 @@ public class ContentController {
 
     @RequestMapping(value = "/{nav}/{contentType}/{id}")
     public String content(@PathVariable String nav, @PathVariable String contentType, @PathVariable Integer id, Model model) {
-        Menu menuSelect = menuManager.findOne(nav);
-        Content content = new Content();
-        List<Content> contentList = new ArrayList<Content>();
-        model.addAttribute("menuSelect", menuSelect);
+        Content content = contentManager.findOne(id);
+        List<Content> contentList = contentManager.findContents(content.getType());
         model.addAttribute("content", content);
         model.addAttribute("contentList", contentList);
         return "content";
