@@ -32,4 +32,16 @@ public class ContentController {
         return "content";
     }
 
+    @RequestMapping(value = "/{nav}/{contentType}")
+    public String contentType(@PathVariable String nav, @PathVariable String contentType, Model model) {
+
+        return "content";
+    }
+
+    @RequestMapping(value = "/{nav}")
+    public String nav(@PathVariable String nav, Model model) {
+
+        return "content";
+    }
+
 }
