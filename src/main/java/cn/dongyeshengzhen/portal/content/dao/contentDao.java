@@ -11,5 +11,5 @@ import java.util.List;
  * Created by dongye on 2016/9/4.
  */
 @Repository
-public interface ContentDao extends JpaRepository<Content, Integer>, JpaSpecificationExecutor<Content> {
+public interface ContentDao extends JpaRepository<Content, Integer>, JpaSpecificationExecutor<Content>,ContentDaoExtend {
 }

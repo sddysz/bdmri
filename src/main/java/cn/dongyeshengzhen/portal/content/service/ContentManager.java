@@ -21,7 +21,8 @@ public class ContentManager {
     }
 
     public List<Content> findContents(ContentType type) {
-        return null;
+
+        return contentDao.findContentByTypeId(type.getId());
     }
 
 }

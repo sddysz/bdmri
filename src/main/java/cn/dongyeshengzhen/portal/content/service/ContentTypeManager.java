@@ -22,8 +22,7 @@ public class ContentTypeManager {
         return contentTypeDao.findOne(id);
     }
 
-    public List<Content> findContents(Menu menu) {
-        return null;
+    public ContentType findOne(String name) {
+        return contentTypeDao.findByName(name);
     }
-
 }

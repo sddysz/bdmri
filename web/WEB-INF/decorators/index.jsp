@@ -51,12 +51,12 @@
 <d:footer></d:footer>
 <div class="footerbg">
     <div class="container footer">
-        <img src="./创我科技_files/logo01.png">
+        <img src="">
         <div style="margin-top:27px;">版权所有 广东创我科技发展有限公司 粤ICP备10060444号 Copyright 1997-2015 Creawor All Rights
             Reserved
             <br>
             <div style="margin-top:0;">
-                <img src="./创我科技_files/beian.png" style="margin-top: 0;">
+                <img src="" style="margin-top: 0;">
                 <a target="_blank"
                    href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44049102496043"
                    style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img
@@ -108,7 +108,7 @@
         OUTLINE-WIDTH: 0px;
         WIDTH: 40px;
         DISPLAY: block;
-        BACKGROUND: url(images/back-top.png) no-repeat 0px 0px;
+        BACKGROUND: url(/resource/image/back-top.png) no-repeat 0px 0px;
         FLOAT: right;
         HEIGHT: 40px;
         MARGIN-LEFT: 10px
@@ -126,7 +126,7 @@
             OUTLINE-WIDTH: 0px;
             WIDTH: 30px;
             DISPLAY: block;
-            BACKGROUND: url(images/back-top_mi.png) no-repeat 0px 0px;
+            BACKGROUND: url(/resource/image/back-top_mi.png) no-repeat 0px 0px;
             FLOAT: right;
             HEIGHT: 30px;
             MARGIN-LEFT: 10px

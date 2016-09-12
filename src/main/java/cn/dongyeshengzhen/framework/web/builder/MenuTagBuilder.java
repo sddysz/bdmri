@@ -66,7 +66,7 @@ public class MenuTagBuilder implements TagBuilder {
             } else {
                 buffer.append("mainNav' ");
             }
-            buffer.append("href='").append(m.getName()).append("'").append("id='nav").append(m.getId()).append("'>");
+            buffer.append("href='/nav_").append(m.getName()).append("'").append("id='nav").append(m.getId()).append("'>");
             buffer.append(m.getDisplayName()).append("</a>");
 
 
@@ -88,7 +88,7 @@ public class MenuTagBuilder implements TagBuilder {
             hideMenuBuffer.append("<div for='nav" + m.getId() + "'>");
             for (int j = 0; j < m.getContentTypeList().size(); j++) {
                 ContentType c = m.getContentTypeList().get(j);
-                hideMenuBuffer.append("<a>" + c.getDisplayName() + "</a>");
+                hideMenuBuffer.append("<a href='/nav_" + m.getName() + "/" + c.getName() + "'>" + c.getDisplayName() + "</a>");
             }
             hideMenuBuffer.append("</div>");
             buffer.append(hideMenuBuffer);
@@ -108,12 +108,12 @@ public class MenuTagBuilder implements TagBuilder {
             StringBuffer hideMenuBuffer = new StringBuffer();
             Menu m = menus.get(i);
             if (m.getContentTypeList().isEmpty()) {
-                buffer.append("<a href=\"").append(m.getUrl()).append("\">").append(m.getDisplayName()).append("</a>");
+                buffer.append("<a href=\"/nav_").append(m.getName()).append("\">").append(m.getDisplayName()).append("</a>");
             } else {
                 hideMenuBuffer.append("<span class=\"menuhide_span\">").append(m.getDisplayName()).append("<h1 style=\"display: none;\">");
                 for (int j = 0; j < m.getContentTypeList().size(); j++) {
                     ContentType c = m.getContentTypeList().get(j);
-                    hideMenuBuffer.append("<a>" + c.getDisplayName() + "</a>");
+                    hideMenuBuffer.append("<a href='/nav_" + m.getName() + "/" + c.getName() + "'>" + c.getDisplayName() + "</a>");
                 }
                 hideMenuBuffer.append("</h1>\n </span>");
                 buffer.append(hideMenuBuffer);

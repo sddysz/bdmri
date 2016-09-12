@@ -7,7 +7,7 @@
     <bean id="defaultEntityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="jpaVendorAdapter" ref="jpaVendorAdapter" />
         <property name="jpaDialect" ref="jpaDialect" />
-        <property name="persistenceUnitName" value="tenant_unit"/>
+        <property name="persistenceUnitName" value="user_unit"/>
         <property name="packagesToScan" value="cn.dongyeshengzhen"/>
         <property name="jpaProperties">
             <props>

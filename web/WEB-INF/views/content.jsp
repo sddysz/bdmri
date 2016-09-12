@@ -13,35 +13,17 @@
     <title>Title</title>
 </head>
 <body>
-<div class="subnav container">
-    <a href="index.aspx">首页</a>
-    <span>&gt;</span>
-    <span>产品和服务</span>
-    <span>&gt;</span>
-    <span>大数据+</span>
-</div>
+
 
 <div id="subnav2" class="subnav2 container">
 
-    <div onclick="changeSelectSubNav2(56)" id="subnav2Div56" class="subnav2Selection">
-        大数据+
-    </div>
+    <c:forEach items="${contentTypeList}" var="item">
+        <div id="subnav${item.name}" onclick="clickType('${item.name}')"
+             class="subnavclick <c:if test="${item.id eq content.type.id}">subnav2Selection</c:if>">
+                ${item.displayName}
+        </div>
+    </c:forEach>
 
-    <div onclick="changeSelectSubNav2(57)" id="subnav2Div57">
-        电信行业产品
-    </div>
-
-    <div onclick="changeSelectSubNav2(58)" id="subnav2Div58">
-        公共安全产品
-    </div>
-
-    <div onclick="changeSelectSubNav2(59)" id="subnav2Div59">
-        金融证券产品
-    </div>
-
-    <div onclick="changeSelectSubNav2(60)" id="subnav2Div60">
-        运营服务
-    </div>
 
 </div>
 <div class="content container">
@@ -50,8 +32,9 @@
             <li class="menu_selected"><a>大数据+</a><i class="icon_downarrow"></i></li>
             <h1 id="ContentList" class="hideleftbar">
                 <c:forEach items="${contentList}" var="item">
-                <li><a id="leftbarItem172" href="javascript:void(0);" onclick="showDetail(172)"
-                       class="leftbarList <c:if test="${item.id eq content.id}" >hideleftbar_selected</c:if>">${item.type.displayName}</a></li>
+                    <li><a id="leftbarItem172" href="/nav_${content.type.menu.name}/${content.type.name}/${content.id}"
+                           class="leftbarList <c:if test="${item.id eq content.id}" >hideleftbar_selected</c:if>">${item.type.displayName}</a>
+                    </li>
                 </c:forEach>
 
             </h1>
@@ -59,10 +42,19 @@
         <div class="menubg"></div>
     </div>
     <div id="divContent" class="rightbar"><h1>
-        <span style="line-height:1.5;"><span style="line-height:1;"></span><span style="font-family:'Microsoft YaHei';">${content.title}</span></span>
+        <span style="line-height:1.5;"><span style="line-height:1;"></span><span
+                style="font-family:'Microsoft YaHei';">${content.title}</span></span>
     </h1>
-     ${content.content}
+        ${content.content}
     </div>
 </div>
+<script>
+
+    function clickType(typeName) {
+        location.href = "/nav_${content.type.menu.name}/" + typeName;
+    }
+
+
+</script>
 </body>
 </html>
