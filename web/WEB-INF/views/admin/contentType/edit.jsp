@@ -41,7 +41,7 @@
                         <div class="form-group col-sm-6">
                             <label for="type" class="col-sm-2 control-label">所属菜单：</label>
                             <div class="col-sm-9">
-                                <select id="type" name="type.id" class="form-control"">
+                                <select id="type" name="type.id" class="form-control">
                                     <c:forEach items="${menuList}" var="item">
                                         <option value="${item.id}">${item.displayName}</option>
                                     </c:forEach>
