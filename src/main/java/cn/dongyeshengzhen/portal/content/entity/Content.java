@@ -14,10 +14,10 @@ public class Content {
     private Integer id;
     private String title;
     @ManyToOne(optional = false)
-    @JoinColumn(name = "typeId",insertable = false,updatable = false)
+    @JoinColumn(name = "typeId")
     private ContentType type;
     private String content;
-    private Integer order;
+    private Integer orderId;
     private Date createTime;
     private Date updateTime;
 
@@ -53,12 +53,12 @@ public class Content {
         this.content = content;
     }
 
-    public Integer getOrder() {
-        return order;
+    public Integer getOrderId() {
+        return orderId;
     }
 
-    public void setOrder(Integer order) {
-        this.order = order;
+    public void setOrderId(Integer orderId) {
+        this.orderId = orderId;
     }
 
     public Date getCreateTime() {

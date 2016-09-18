@@ -6,6 +6,8 @@ import cn.dongyeshengzhen.portal.content.entity.ContentType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.xml.crypto.Data;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -23,6 +25,21 @@ public class ContentManager {
     public List<Content> findContents(ContentType type) {
 
         return contentDao.findContentByTypeId(type.getId());
+    }
+
+    public void save(Content content) {
+        content.setCreateTime(new Date());
+        if (content.getId() != null) {
+            Content tempContent = contentDao.findOne(content.getId());
+            content.setCreateTime(tempContent.getCreateTime());
+        }
+        content.setUpdateTime(new Date());
+        contentDao.save(content);
+    }
+
+
+    public List findAll() {
+    return contentDao.findAll();
     }
 
 }

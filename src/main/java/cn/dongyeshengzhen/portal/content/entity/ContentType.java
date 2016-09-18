@@ -19,7 +19,7 @@ public class ContentType {
     @ManyToOne
     @JoinColumn(name = "navId")
     private Menu menu;
-    private Integer order;
+    private Integer orderId;
     private Date createTime;
     private Date updateTime;
 
@@ -56,12 +56,12 @@ public class ContentType {
         this.menu = menu;
     }
 
-    public Integer getOrder() {
-        return order;
+    public Integer getOrderId() {
+        return orderId;
     }
 
-    public void setOrder(Integer order) {
-        this.order = order;
+    public void setOrderId(Integer orderId) {
+        this.orderId = orderId;
     }
 
     public Date getCreateTime() {

@@ -25,4 +25,8 @@ public class ContentTypeManager {
     public ContentType findOne(String name) {
         return contentTypeDao.findByName(name);
     }
+
+    public  List<ContentType> findAll(){
+        return contentTypeDao.findAll();
+    }
 }

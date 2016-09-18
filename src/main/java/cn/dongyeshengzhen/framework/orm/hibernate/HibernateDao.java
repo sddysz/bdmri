@@ -181,7 +181,7 @@
 //
 //		if (page.isOrderBySetted()) {
 //			String[] orderByArray = StringUtils.split(page.getOrderBy(), ',');
-//			String[] orderArray = StringUtils.split(page.getOrder(), ',');
+//			String[] orderArray = StringUtils.split(page.getOrderId(), ',');
 //
 //			Assert.isTrue(orderByArray.length == orderArray.length, "分页多重排序参数中,排序字段与排序方向的个数不相等");
 //
