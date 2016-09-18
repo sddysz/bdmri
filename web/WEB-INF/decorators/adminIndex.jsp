@@ -131,9 +131,9 @@
                 <li class="header"></li>
                 <li class="active treeview">
                     <ul class="treeview-menu">
-                        <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> 内容列表 v1</a></li>
-                        <li><a href="index2.html"><i class="fa fa-circle-o"></i> 添加内容</a></li>
-                        <li><a href="index2.html"><i class="fa fa-circle-o"></i> 内容类型列表</a></li>
+                        <li><a href="/admin/content/list"><i class="fa fa-circle-o"></i> 内容列表 v1</a></li>
+                        <li><a href="/admin/content/edit"><i class="fa fa-circle-o"></i> 添加内容</a></li>
+                        <li><a href="/admin/contentType/list"><i class="fa fa-circle-o"></i> 内容类型列表</a></li>
                     </ul>
                 </li>
             </ul>

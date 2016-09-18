@@ -9,13 +9,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>编辑内容</title>
+    <title></title>
 </head>
 <body>
 
 <section class="content">
 
-    <form id="form" action="/admin/content/save?id=${content.id}" method="post" class="form-horizontal">
+    <form id="form" action="/admin/contentType/save?id=${contentType.id}" method="post" class="form-horizontal">
         <div class="box box-solid">
             <div class="btn-group">
                 <button type="button" class="btn btn-default" onclick="history.back()">返回</button>
@@ -34,15 +34,15 @@
 
                             <label for="title" class="col-sm-1 control-label">标题：</label>
                             <div class="col-sm-10">
-                                <input id="title" name="title" class="form-control" value="${content.title}">
+                                <input id="title" name="title" class="form-control" value="${contentType.displayName}">
                             </div>
                         </div>
 
                         <div class="form-group col-sm-6">
-                            <label for="type" class="col-sm-2 control-label">类型：</label>
+                            <label for="type" class="col-sm-2 control-label">所属菜单：</label>
                             <div class="col-sm-9">
-                                <select id="type" name="type.id" class="form-control" value="${content.title}">
-                                    <c:forEach items="${typeList}" var="item">
+                                <select id="type" name="type.id" class="form-control"">
+                                    <c:forEach items="${menuList}" var="item">
                                         <option value="${item.id}">${item.displayName}</option>
                                     </c:forEach>
                                 </select>
@@ -54,21 +54,7 @@
                             <label for="orderId" class="col-sm-2 control-label">排序：</label>
                             <div class="col-sm-9">
                                 <input id="orderId" name="orderId" type="number" class="form-control "
-                                       value="${content.orderId}">
-                            </div>
-                        </div>
-
-                        <div class="form-group col-sm-12">
-                            <div class="col-sm-12">
-                                <script id="container" name="content" style="height:500px;margin:0px auto;"
-                                        type="text/plain">${content.content}</script>
-                                <script src="/resource/ueditor/ueditor.config.js" type="text/javascript"></script>
-                                <script src="/resource/ueditor/ueditor.all.min.js" type="text/javascript"></script>
-                                <!-- 实例化编辑器 -->
-                                <script type="text/javascript">
-                                    var ue = UE.getEditor('container');
-                                    ue.setHeight(500);
-                                </script>
+                                       value="${contentType.orderId}">
                             </div>
                         </div>
 
