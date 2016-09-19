@@ -115,5 +115,10 @@
     <orderEntry type="library" name="Maven: c3p0:c3p0:0.9.1.1" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.9" level="project" />
     <orderEntry type="library" name="Maven: com.hynnet:sqljdbc4-chs:4.0.2206.100" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-core:1.2.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-spring:1.2.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-web:1.2.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-ehcache:1.2.1" level="project" />
+    <orderEntry type="library" name="Maven: net.sf.ehcache:ehcache-core:2.5.0" level="project" />
   </component>
 </module>

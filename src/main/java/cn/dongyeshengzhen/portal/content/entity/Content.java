@@ -16,6 +16,7 @@ public class Content {
     @ManyToOne(optional = false)
     @JoinColumn(name = "typeId")
     private ContentType type;
+    private String isDisplay;
     private String content;
     private Integer orderId;
     private Date createTime;
@@ -75,5 +76,13 @@ public class Content {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public String getIsDisplay() {
+        return isDisplay;
+    }
+
+    public void setIsDisplay(String isDisplay) {
+        this.isDisplay = isDisplay;
     }
 }

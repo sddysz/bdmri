@@ -29,11 +29,11 @@
 <div class="content container">
     <div class="leftbar">
         <ul>
-            <li class="menu_selected"><a>大数据+</a><i class="icon_downarrow"></i></li>
+            <li class="menu_selected"><a>${content.type.displayName}</a><i class="icon_downarrow"></i></li>
             <h1 id="ContentList" class="hideleftbar">
                 <c:forEach items="${contentList}" var="item">
-                    <li><a id="leftbarItem172" href="/nav_${content.type.menu.name}/${content.type.name}/${content.id}"
-                           class="leftbarList <c:if test="${item.id eq content.id}" >hideleftbar_selected</c:if>">${item.type.displayName}</a>
+                    <li><a id="leftbarItem172" href="/nav_${item.type.menu.name}/${item.type.name}/${item.id}"
+                           class="leftbarList <c:if test="${item.id eq content.id}" >hideleftbar_selected</c:if>">${item.title}</a>
                     </li>
                 </c:forEach>
 

@@ -19,6 +19,7 @@ public class ContentType {
     @ManyToOne
     @JoinColumn(name = "navId")
     private Menu menu;
+    private String isDisplay;
     private Integer orderId;
     private Date createTime;
     private Date updateTime;
@@ -78,5 +79,13 @@ public class ContentType {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public String getIsDisplay() {
+        return isDisplay;
+    }
+
+    public void setIsDisplay(String isDisplay) {
+        this.isDisplay = isDisplay;
     }
 }

@@ -16,7 +16,22 @@
 <section class="content">
 
     <form id="form" action="" method="post" class="form-horizontal">
+        <div class="box box-solid">
 
+            <div class="box-body">
+
+
+                <!-- Check all button -->
+
+                <div class="btn-group">
+
+
+                    <a href="/admin/contentType/edit" class="btn btn-default btn-sm checkbox-toggle"><i
+                            class="fa fa-plus"></i>新建</a>
+                </div><!-- /.btn-group -->
+
+            </div>
+        </div>
 
         <div class="box box-solid">
 
@@ -26,15 +41,15 @@
                     <table class="table table-hover table-striped">
                         <tbody>
                         <tr>
-                            <th><input type="checkbox" name="checkAll" id="checkSelect" value="全选"/></th>
                             <th>名称</th>
                             <th>所属菜单</th>
+                            <th>操作</th>
                         </tr>
                         <c:forEach items="${contentTypeList}" var="item">
                             <tr>
-                                <td ><input type="checkbox" name="checkSelect" value="${item.id}" id="checkSelect_${item.id}"/></td>
                                 <td><a href="/admin/contentType/edit?id=${item.id}" class="btnView" title="${item.displayName}">${item.displayName}</a>&nbsp;</td>
                                 <td>${item.menu.displayName}</td>
+                                <td><a href="/admin/contentType/delete?id=${item.id}">删除</a> </td>
                             </tr>
                         </c:forEach>
                         </tbody>

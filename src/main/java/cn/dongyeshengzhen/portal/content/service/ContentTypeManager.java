@@ -1,13 +1,11 @@
 package cn.dongyeshengzhen.portal.content.service;
 
-import cn.dongyeshengzhen.framework.security.entity.Menu;
-import cn.dongyeshengzhen.portal.content.dao.ContentDao;
 import cn.dongyeshengzhen.portal.content.dao.ContentTypeDao;
-import cn.dongyeshengzhen.portal.content.entity.Content;
 import cn.dongyeshengzhen.portal.content.entity.ContentType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -26,7 +24,22 @@ public class ContentTypeManager {
         return contentTypeDao.findByName(name);
     }
 
-    public  List<ContentType> findAll(){
+    public ContentType save(ContentType contentType) {
+
+        contentType.setCreateTime(new Date());
+        if (contentType.getId() != null) {
+            ContentType tempContentType = contentTypeDao.findOne(contentType.getId());
+            contentType.setCreateTime(tempContentType.getCreateTime());
+        }
+        contentType.setUpdateTime(new Date());
+        return contentTypeDao.save(contentType);
+    }
+
+    public List<ContentType> findAll() {
         return contentTypeDao.findAll();
+    }
+
+    public void delete(Integer id) {
+        contentTypeDao.delete(id);
     }
 }

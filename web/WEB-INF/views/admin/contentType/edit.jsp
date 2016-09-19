@@ -27,18 +27,28 @@
         <div class="box box-solid">
 
             <div class="box-body">
-                <div class="row">
+                <div >
                     <div>
 
-                        <div class="form-group col-sm-12">
+                        <div class="form-group col-sm-7">
 
-                            <label for="title" class="col-sm-1 control-label">标题：</label>
-                            <div class="col-sm-10">
+                            <label for="title" class="col-sm-2 control-label">标题：</label>
+                            <div class="col-sm-9">
                                 <input id="title" name="title" class="form-control" value="${contentType.displayName}">
                             </div>
                         </div>
 
-                        <div class="form-group col-sm-6">
+                        <div class="form-group col-sm-7">
+
+                            <label for="isDisplay" class="col-sm-2 control-label">是否显示：</label>
+                            <div class="col-sm-9">
+                                <select id="isDisplay" name="isDisplay" class="form-control" value="${contentType.isDisplay}">
+                                    <option value="1">是</option>
+                                    <option value="0">否</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-7">
                             <label for="type" class="col-sm-2 control-label">所属菜单：</label>
                             <div class="col-sm-9">
                                 <select id="type" name="type.id" class="form-control">
@@ -49,7 +59,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group col-sm-6">
+                        <div class="form-group col-sm-7">
 
                             <label for="orderId" class="col-sm-2 control-label">排序：</label>
                             <div class="col-sm-9">
