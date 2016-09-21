@@ -32,9 +32,16 @@
 
                         <div class="form-group col-sm-7">
 
-                            <label for="title" class="col-sm-2 control-label">标题：</label>
+                            <label for="displayName" class="col-sm-2 control-label">标题：</label>
                             <div class="col-sm-9">
-                                <input id="title" name="title" class="form-control" value="${contentType.displayName}">
+                                <input id="displayName" name="displayName" class="form-control" value="${contentType.displayName}">
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-7">
+
+                            <label for="displayName" class="col-sm-2 control-label">URL显示地址：</label>
+                            <div class="col-sm-9">
+                                <input id="name" name="name" class="form-control" value="${contentType.name}">
                             </div>
                         </div>
 
@@ -43,17 +50,17 @@
                             <label for="isDisplay" class="col-sm-2 control-label">是否显示：</label>
                             <div class="col-sm-9">
                                 <select id="isDisplay" name="isDisplay" class="form-control" value="${contentType.isDisplay}">
-                                    <option value="1">是</option>
-                                    <option value="0">否</option>
+                                    <option value="1" <c:if test="${contentType.isDisplay eq 1}">selected </c:if>  >是</option>
+                                    <option value="0"<c:if test="${contentType.isDisplay eq 0}">selected </c:if>>否</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group col-sm-7">
-                            <label for="type" class="col-sm-2 control-label">所属菜单：</label>
+                            <label for="menuId" class="col-sm-2 control-label">所属菜单：</label>
                             <div class="col-sm-9">
-                                <select id="type" name="type.id" class="form-control">
+                                <select id="menuId" name="menu.id" class="form-control">
                                     <c:forEach items="${menuList}" var="item">
-                                        <option value="${item.id}">${item.displayName}</option>
+                                        <option value="${item.id}" <c:if test="${item.id eq contentType.menu.id}">selected </c:if>>${item.displayName}</option>
                                     </c:forEach>
                                 </select>
                             </div>

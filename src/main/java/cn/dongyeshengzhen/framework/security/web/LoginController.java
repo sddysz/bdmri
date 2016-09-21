@@ -1,4 +1,4 @@
-package cn.dongyeshengzhen.portal.admin.web;
+package cn.dongyeshengzhen.framework.security.web;
 
 import cn.dongyeshengzhen.framework.security.entity.User;
 import org.apache.commons.logging.Log;

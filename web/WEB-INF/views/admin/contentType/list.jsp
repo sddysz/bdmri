@@ -17,6 +17,11 @@
 
     <form id="form" action="" method="post" class="form-horizontal">
         <div class="box box-solid">
+            <div class="box-body no-padding">
+                <h2>内容列表</h2>
+            </div>
+        </div>
+        <div class="box box-solid">
 
             <div class="box-body">
 
@@ -42,12 +47,14 @@
                         <tbody>
                         <tr>
                             <th>名称</th>
+                            <th>URL名称</th>
                             <th>所属菜单</th>
                             <th>操作</th>
                         </tr>
                         <c:forEach items="${contentTypeList}" var="item">
                             <tr>
                                 <td><a href="/admin/contentType/edit?id=${item.id}" class="btnView" title="${item.displayName}">${item.displayName}</a>&nbsp;</td>
+                                <td>${item.name}</td>
                                 <td>${item.menu.displayName}</td>
                                 <td><a href="/admin/contentType/delete?id=${item.id}">删除</a> </td>
                             </tr>

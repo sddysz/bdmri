@@ -19,7 +19,7 @@
                 /resource/* = anon
                 /nv*/* = anon
                 /index*=anon
-                /admin*=authc
+                /admin*/**=authc
             </value>
         </property>
         <property name="filters">

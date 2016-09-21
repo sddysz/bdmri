@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="sitemesh" uri="http://www.opensymphony.com/sitemesh/decorator" %>
-<%@ include file="/common/taglibs.jsp"%>
+<%@ include file="/common/taglibs.jsp" %>
 
 
 <!DOCTYPE html>
@@ -104,16 +104,21 @@
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
                     <!-- User Account: style can be found in dropdown.less -->
-                    <li class="dropdown user user-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <span class="hidden-xs">注销</span>
+                    <li class="dropdown notifications-menu ">
+                        <a href="javascript:void(0);" class="dropdown-toggle " data-toggle="dropdown">
+                            <i class="fa fa-gears"></i>
                         </a>
-                        <ul class="dropdown-menu">
-                            <!-- Menu Footer-->
-                            <li class="user-footer">
-                                <div class="pull-right">
-                                    <a href="/logout" class="btn btn-default btn-flat">注销</a>
-                                </div>
+                        <ul class="dropdown-menu setting" >
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    <li>
+                                        <a href="/admin/user/edit"><i class="fa fa-users text-aqua"></i>修改密码</a>
+                                    </li>
+                                    <li>
+                                        <a href="/logout"><i class="fa fa-retweet text-red"></i>注销</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </li>
@@ -134,6 +139,7 @@
                         <li><a href="/admin/content/list"><i class="fa fa-circle-o"></i> 内容列表 v1</a></li>
                         <li><a href="/admin/content/edit"><i class="fa fa-circle-o"></i> 添加内容</a></li>
                         <li><a href="/admin/contentType/list"><i class="fa fa-circle-o"></i> 内容类型列表</a></li>
+                        <li><a href="/admin/contentType/edit"><i class="fa fa-circle-o"></i> 添加类型</a></li>
                     </ul>
                 </li>
             </ul>
@@ -155,5 +161,17 @@
 
 </div><!-- ./wrapper -->
 
+
 </body>
+<script>
+    $(".setting a").click(function(){
+        var a = $(this);
+        if(a.attr("href") != "#"){
+            addTabs({ id: $(this).text(), title: $(this).text(), close: true, url:$(this).attr("href") });
+            //点击设置菜单，打开tab后隐藏下拉菜单
+            $(".setting").dropdown("toggle");
+            return false;
+        }
+    });
+</script>
 </html>

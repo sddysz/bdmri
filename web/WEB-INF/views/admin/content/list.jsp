@@ -16,8 +16,27 @@
 <section class="content">
 
     <form id="form" action="" method="post" class="form-horizontal">
+        <div class="box box-solid">
+            <div class="box-body no-padding">
+                <h2>内容列表</h2>
+            </div>
+        </div>
+        <div class="box box-solid">
+
+            <div class="box-body">
 
 
+                <!-- Check all button -->
+
+                <div class="btn-group">
+
+
+                    <a href="/admin/content/edit" class="btn btn-default btn-sm checkbox-toggle"><i
+                            class="fa fa-plus"></i>新建</a>
+                </div><!-- /.btn-group -->
+
+            </div>
+        </div>
         <div class="box box-solid">
 
             <div class="box-body no-padding">
@@ -36,8 +55,10 @@
                         </tr>
                         <c:forEach items="${contentList}" var="item">
                             <tr>
-                                <td ><input type="checkbox" name="checkSelect" value="${item.id}" id="checkSelect_${item.id}"/></td>
-                                <td><a href="/admin/content/edit?id=${item.id}" class="btnView" title="${item.title}">${item.title}</a>&nbsp;</td>
+                                <td><input type="checkbox" name="checkSelect" value="${item.id}"
+                                           id="checkSelect_${item.id}"/></td>
+                                <td><a href="/admin/content/edit?id=${item.id}" class="btnView"
+                                       title="${item.title}">${item.title}</a>&nbsp;</td>
                                 <td>${item.type.menu.displayName}</td>
                                 <td>${item.type.displayName}&nbsp;</td>
                                 <td>${item.updateTime}&nbsp;</td>

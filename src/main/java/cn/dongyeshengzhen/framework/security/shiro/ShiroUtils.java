@@ -44,7 +44,7 @@ public class ShiroUtils {
 	public static String getFullname() {
 		ShiroPrincipal principal = getPrincipal();
 		if(principal != null) return principal.toString();
-		return "";
+		return principal.getUsername();
 	}
 	
 	/**
@@ -56,6 +56,6 @@ public class ShiroUtils {
 		if(principal != null) return principal.getUsername();
 		throw new RuntimeException("user's name is null.");
 	}
-	
+
 
 }
