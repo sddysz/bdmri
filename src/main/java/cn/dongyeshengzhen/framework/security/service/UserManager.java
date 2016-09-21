@@ -31,7 +31,7 @@ public class UserManager {
      * @param entity
      */
     public void save(User entity) {
-        if (StringUtils.isNotBlank(entity.getPlainPassword())) {
+        if (StringUtils.isNotBlank(entity.getPassword())) {
             entryptPassword(entity);
         } else {
             User user = userDao.findOne(entity.getId());
@@ -103,7 +103,7 @@ public class UserManager {
         byte[] salt = Digests.generateSalt(SALT_SIZE);
         user.setSalt(EncodeUtils.hexEncode(salt));
 
-        byte[] hashPassword = Digests.sha1(user.getPlainPassword().getBytes(), salt, HASH_INTERATIONS);
+        byte[] hashPassword = Digests.sha1(user.getPassword().getBytes(), salt, HASH_INTERATIONS);
         user.setPassword(EncodeUtils.hexEncode(hashPassword));
     }
 }

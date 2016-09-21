@@ -19,7 +19,7 @@ public abstract class SecurityEntity implements Serializable{
 	 */
 	private static final long serialVersionUID = -5288872906807628038L;
 	//主键标识ID
-	protected Integer id;
+	protected Long id;
 
 	/**
 	 * 安全实体的主键生成策略为序列，序列名称为SEC_SEQUENCE
@@ -27,11 +27,11 @@ public abstract class SecurityEntity implements Serializable{
 	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 }

@@ -1,6 +1,6 @@
 package cn.dongyeshengzhen.framework.security.shiro;
 
-import cn.publink.framework.security.entity.User;
+import cn.dongyeshengzhen.framework.security.entity.User;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -33,18 +33,6 @@ public class ShiroPrincipal implements Serializable {
 	 */
 	public ShiroPrincipal(User user) {
 		this.user = user;
-	}
-	public List<String> getAuthorities() {
-		return authorities;
-	}
-	public void setAuthorities(List<String> authorities) {
-		this.authorities = authorities;
-	}
-	public List<String> getRoles() {
-		return roles;
-	}
-	public void setRoles(List<String> roles) {
-		this.roles = roles;
 	}
 	public boolean isAuthorized() {
 		return isAuthorized;

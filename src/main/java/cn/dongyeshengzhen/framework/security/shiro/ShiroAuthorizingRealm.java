@@ -1,8 +1,8 @@
 package cn.dongyeshengzhen.framework.security.shiro;
 
-import cn.publink.framework.security.entity.User;
-import cn.publink.framework.security.service.UserManager;
-import cn.publink.framework.utils.EncodeUtils;
+import cn.dongyeshengzhen.framework.security.entity.User;
+import cn.dongyeshengzhen.framework.security.service.UserManager;
+import cn.dongyeshengzhen.framework.utils.EncodeUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.shiro.authc.*;
@@ -15,7 +15,6 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
 
 import javax.annotation.PostConstruct;
-import java.util.List;
 
 /**
  * shiro的认证授权域
@@ -54,14 +53,8 @@ public class ShiroAuthorizingRealm extends AuthorizingRealm {
 		try {
 			if(!subject.isAuthorized()) {
 				//根据用户名称，获取该用户所有的权限列表
-				List<String> authorities = userManager.getAuthoritiesName(userId);
-				List<String> rolelist = userManager.getRolesName(userId);
-				subject.setAuthorities(authorities);
-				subject.setRoles(rolelist);
 				subject.setAuthorized(true);
 				log.info("用户【" + username + "】授权初始化成功......");
-				log.info("用户【" + username + "】 角色列表为：" + subject.getRoles());
-				log.info("用户【" + username + "】 权限列表为：" + subject.getAuthorities());
 			} else {
 				log.info("用户【" + username + "】已授权......");
 			}
@@ -69,8 +62,6 @@ public class ShiroAuthorizingRealm extends AuthorizingRealm {
 			throw new AuthorizationException("用户【" + username + "】授权失败");
 		}
 		//给当前用户设置权限
-		info.addStringPermissions(subject.getAuthorities());
-		info.addRoles(subject.getRoles());
 		return info;
 	}
 
@@ -96,17 +87,9 @@ public class ShiroAuthorizingRealm extends AuthorizingRealm {
 		    log.warn("用户不存在" + username);
 		    throw new UnknownAccountException("用户不存在");
 		}
-		if(user.getEnabled() == null || "2".equals(user.getEnabled())) {
-		    log.warn("用户被禁止使用"+ username);
-		    throw new UnknownAccountException("用户被禁止使用");
-		}
 		log.info("用户【" + username + "】登录成功");
 		byte[] salt = EncodeUtils.hexDecode(user.getSalt());
 		ShiroPrincipal subject = new ShiroPrincipal(user);
-		List<String> authorities = userManager.getAuthoritiesName(user.getId());
-		List<String> rolelist = userManager.getRolesName(user.getId());
-		subject.setAuthorities(authorities);
-		subject.setRoles(rolelist);
 		subject.setAuthorized(true);
 		return new SimpleAuthenticationInfo(subject, user.getPassword(), ByteSource.Util.bytes(salt), getName());
 	}

@@ -3,6 +3,7 @@ package cn.dongyeshengzhen.framework.security.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 /**
  * 用户实体类，继承抽象安全实体类
@@ -11,19 +12,20 @@ import javax.persistence.Table;
  * @since 0.1
  */
 @Entity
-@Table(name = "SEC_USER")
+@Table(name = "user")
 public class User extends SecurityEntity {
     private static final long serialVersionUID = 7446802057673100315L;
     //系统管理员账号类型
     public static final Integer TYPE_ADMIN = 0;
     //普通用户账号类型
     public static final Integer TYPE_GENERAL = 1;
+
+
     //登录用户名称
     private String username;
     //密码
     private String password;
     //明文密码
-    private String plainPassword;
     //salt
     private String salt;
     //用户姓名
@@ -73,15 +75,9 @@ public class User extends SecurityEntity {
         return TYPE_GENERAL;
     }
 
-    public String getPlainPassword() {
-        return plainPassword;
-    }
-
-    public void setPlainPassword(String plainPassword) {
-        this.plainPassword = plainPassword;
-    }
 
     public void setSalt(String salt) {
         this.salt = salt;
     }
+
 }
