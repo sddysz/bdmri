@@ -48,15 +48,36 @@
        href="http://www.creawor.com/content.aspx?cateId=57#top" class="back-top">
         返回顶部</a>
 </div>
-<d:footer></d:footer>
-
+<div class="frilinkbg">
+    <div class="container frilink">
+        <d:footer></d:footer>
+        <dl class="fri_r">
+            <dt>
+            <h1>联系我们</h1>
+            <div>联系电话：0756-3377435</div>
+            <div>服务热线：400-1000-731</div>
+            <div>传真号码：0756-3377436</div>
+            <div>电子邮箱：info@creawor.com</div>
+            <div>公司地址：珠海市高新区南方软件园B6栋2楼</div>
+            </dt>
+            <dd>
+                <img src="images/ewm.png">
+            </dd>
+        </dl>
+    </div>
+</div>
 <div class="footerbg">
     <div class="container footer">
         <img src="/resource/image/logo01.png">
-        <div style="margin-top:27px;">版权所有  广东创我科技发展有限公司  粤ICP备10060444号  Copyright 1997-2015 Creawor All Rights Reserved
-            <br><div style="margin-top:0;">
+        <div style="margin-top:27px;">版权所有 广东创我科技发展有限公司 粤ICP备10060444号 Copyright 1997-2015 Creawor All Rights Reserved
+            <br>
+            <div style="margin-top:0;">
                 <img src="./创我科技_files/beian.png" style="margin-top: 0;">
-                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44049102496043" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="http://www.creawor.com/content.aspx?cateId=56" style="float:left;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">粤公网安备 44049102496043号</p></a></div>
+                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44049102496043"
+                   style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img
+                        src="http://www.creawor.com/content.aspx?cateId=56" style="float:left;">
+                    <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">粤公网安备
+                        44049102496043号</p></a></div>
         </div>
     </div>
 </div>
@@ -165,18 +186,18 @@
 </script>
 <script>
 
-        var _cId = 16;
-        var _cateId = 56;
-        var _inId = "0";
-        $(function () {
-            if (_cId == 16) {
-                $("#topImg").css("display", "none");
-            }
-            //if (_cId == 19) {
-            //    $("#subnav2").css("display","none");
-            //}
+    var _cId = 16;
+    var _cateId = 56;
+    var _inId = "0";
+    $(function () {
+        if (_cId == 16) {
+            $("#topImg").css("display", "none");
+        }
+        //if (_cId == 19) {
+        //    $("#subnav2").css("display","none");
+        //}
 
-            $("#subnav2Div" + _cateId).addClass("subnav2Selection");
+        $("#subnav2Div" + _cateId).addClass("subnav2Selection");
         function changeSelectSubNav2(_id) {
             if (_id == 72) {
                 location.href = "infonews.aspx";
@@ -191,8 +212,7 @@
         }
 
 
+</script>
 
-    </script>
-
-</body >
-</html >
+</body>
+</html>
