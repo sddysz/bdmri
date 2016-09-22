@@ -13,32 +13,21 @@
 <body>
 <div class="flexslider">
     <ul class="slides">
-        <li class=""
-            style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
+        <li>
             <a href="http://www.creawor.com/content.aspx?cateId=56&amp;id=172"><img
                     src="/resource/image/banner01.jpg" draggable="false"></a></li>
-        <li class=""
-            style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
+        <li>
             <a href="http://www.creawor.com/content.aspx?cateId=58&amp;id=194"><img
                     src="/resource/image/banner02.jpg" draggable="false"></a></li>
-        <li class="flex-active-slide"
-            style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;">
+        <li>
             <a href="http://www.creawor.com/content.aspx?cateId=57&amp;id=175"><img
                     src="/resource/image/banner03.jpg" draggable="false"></a></li>
-        <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
+        <li>
             <a href="http://www.creawor.com/content.aspx?cateId=59&amp;id=195"><img
                     src="/resource/image/banner04.jpg" draggable="false"></a></li>
     </ul>
-    <ol class="flex-control-nav flex-control-paging">
-        <li><a class="">1</a></li>
-        <li><a class="">2</a></li>
-        <li><a class="flex-active">3</a></li>
-        <li><a>4</a></li>
-    </ol>
-    <ul class="flex-direction-nav">
-        <li><a class="flex-prev" href="http://www.creawor.com/index.aspx#"></a></li>
-        <li><a class="flex-next" href="http://www.creawor.com/index.aspx#"></a></li>
-    </ul>
+
+
 </div>
 <div class="container">
     <div class="float_news container">
@@ -127,7 +116,15 @@
         </li>
     </ul>
 </div>
-
+<script>
+    $(function () {
+        $('.flexslider').flexslider({
+            directionNav: true,
+            pauseOnAction: true
+        });
+    });
+</script>
 
 </body>
+
 </html>

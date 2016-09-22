@@ -207,7 +207,7 @@
             $(obj).children("img").eq(0).attr("src", codeurl + "?time=" + Math.random());
             return false;
         }
-
+    })
 
 </script>
 

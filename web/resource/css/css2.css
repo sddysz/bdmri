@@ -101,7 +101,7 @@ h3 {
 .slides li img{width:100%;display: block;}
 .flex-control-nav{position:absolute;bottom:10px;z-index:2;width:100%;text-align:center;}
 .flex-control-nav li{display:inline-block;width:14px;height:14px;margin:0 5px;*display:inline;zoom:1;}
-.flex-control-nav a{display:inline-block;width:13px;height:13px;line-height:40px;overflow:hidden;background:url(../image/dot.png) right 0 no-repeat;cursor:pointer;}
+.flex-control-nav a{display:inline-block;width:13px;height:13px;line-height:40px;overflow:hidden;background:url(/resource/image/dot.png) right 0 no-repeat;cursor:pointer;}
 .flex-control-nav .flex-active{background-position:0 0;}
 
 .flex-direction-nav{position:absolute;z-index:3;width:100%;top:45%;}
@@ -750,7 +750,7 @@ br{font-size:initial;}
 .infonews01 li{
 	list-style-image: url(../image/square.jpg);
 	list-style-position: inside;
-	background: url(../image/dot01.png) center;
+	background: url(/resource/image/dot01.png) center;
 	margin-bottom: 22px;
 	font-size: 14px;
 	line-height: 14px;
