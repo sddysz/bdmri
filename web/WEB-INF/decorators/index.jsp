@@ -54,15 +54,12 @@
         <dl class="fri_r">
             <dt>
             <h1>联系我们</h1>
-            <div>联系电话：0756-3377435</div>
-            <div>服务热线：400-1000-731</div>
-            <div>传真号码：0756-3377436</div>
-            <div>电子邮箱：info@creawor.com</div>
-            <div>公司地址：珠海市高新区南方软件园B6栋2楼</div>
+            <div>联系电话：13361217116 </div>
+            <div>固定电话:0532-66888819 </div>
+            <div>电子邮箱：<a style="color: white" href="mailto:QingDaoBDM@126.com">QingDaoBDM@126.com</a></div>
+            <div>微信号:qingdaobtm</div>
+            <div>公司地址：青岛市市南区南京路2号绮丽大厦1502</div>
             </dt>
-            <dd>
-                <img src="images/ewm.png">
-            </dd>
         </dl>
     </div>
 </div>
