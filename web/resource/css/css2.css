@@ -239,22 +239,22 @@ h3 {
     cursor:pointer;
 }
 .i_pic01{
-	background: url(../image/product_banner01.jpg);
+	background: url(/resource/image/product_banner01.jpg);
 }
 .i_pic02{
-	background: url(../image/product_banner02.jpg);
+	background: url(/resource/image/product_banner02.jpg);
 }
 .i_pic03{
-	background: url(../image/product_banner03.jpg);
+	background: url(/resource/image/product_banner03.jpg);
 }
 .i_pic04{
-	background: url(../image/solution_banner01.jpg);
+	background: url(/resource/image/solution_banner01.jpg);
 }
 .i_pic05{
-	background: url(../image/solution_banner02.jpg);
+	background: url(/resource/image/solution_banner02.jpg);
 }
 .i_pic06{
-	background: url(../image/solution_banner03.jpg);
+	background: url(/resource/image/solution_banner03.jpg);
 }
 .i_content li a{
 	font-size: 22px;
@@ -395,7 +395,7 @@ h3 {
 }
 .footer div{
 	float: right;
-	line-height: 100px;
+	line-height: 20px;
 	color: #919194;
 }
 .navhidebg{

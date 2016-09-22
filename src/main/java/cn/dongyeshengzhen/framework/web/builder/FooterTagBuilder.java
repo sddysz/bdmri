@@ -69,6 +69,19 @@ public class FooterTagBuilder implements TagBuilder {
 
         }
         buffer.append("</dt> </dl>");
+        buffer.append("<dl class=\"fri_r\">\n" +
+                "\t\t\t<dt>\n" +
+                "\t\t\t\t<h1>联系我们</h1>\n" +
+                "\t\t\t\t<div>联系电话：0756-3377435</div>\n" +
+                "\t\t\t\t<div>服务热线：400-1000-731</div>\n" +
+                "             \t\t\t<div>传真号码：0756-3377436</div>\n" +
+                "\t\t\t\t<div>电子邮箱：info@creawor.com</div>\n" +
+                "\t\t\t\t<div>公司地址：珠海市高新区南方软件园B6栋2楼</div>\n" +
+                "\t\t\t</dt>\n" +
+                "\t\t\t<dd>\n" +
+                "\t\t\t\t<img src=\"./创我科技_files/ewm.png\">\n" +
+                "\t\t\t</dd>\n" +
+                "\t\t</dl>");
         buffer.append("</div> </div>");
         return buffer.toString();
     }
