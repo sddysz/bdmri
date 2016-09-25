@@ -1,6 +1,7 @@
 package cn.dongyeshengzhen.portal.firstPage.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
@@ -9,6 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "firstpage")
 public class FirstPage {
+    @Id
     private Integer id;
     private String url;
     private String path;

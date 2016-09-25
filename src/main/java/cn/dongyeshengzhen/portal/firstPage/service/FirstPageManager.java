@@ -41,8 +41,8 @@ public class FirstPageManager {
 
     public List findBanners(){
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
-        CriteriaQuery<Content> criteriaQuery = criteriaBuilder.createQuery(Content.class);
-        Root<Content> root = criteriaQuery.from(Content.class);
+        CriteriaQuery<FirstPage> criteriaQuery = criteriaBuilder.createQuery(FirstPage.class);
+        Root<FirstPage> root = criteriaQuery.from(FirstPage.class);
         criteriaQuery.select(root);
         Predicate condition = criteriaBuilder.equal(root.get("type"), "banner");
         criteriaQuery.where(condition);

@@ -25,4 +25,16 @@ public class FileSystemUtil {
         }
         return false;
     }
+
+    public static String getExtName(String fileName) {
+        return getExtName(fileName, '.');
+    }
+
+    public static String getExtName(String fileName, char split) {
+        if (fileName.lastIndexOf(split) == -1) {
+            return "";
+        }
+        String prefix = fileName.substring(fileName.lastIndexOf(split) + 1);
+        return prefix;
+    }
 }

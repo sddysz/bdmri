@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created by dongye on 2016/9/24.
  */
 @Controller
-@RequestMapping(value = "/admin")
+@RequestMapping(value = "/admin/fistpage")
 public class AdminFirstPageController {
 
     @Autowired
@@ -22,7 +22,7 @@ public class AdminFirstPageController {
         return "admin/firstpage/bannerlist";
     }
 
-    @RequestMapping(value = "banneredit")
+    @RequestMapping(value = "banner/edit")
     public String bannerEdit(Integer id, Model model) {
         return "admin/firstpage/banneredit";
     }

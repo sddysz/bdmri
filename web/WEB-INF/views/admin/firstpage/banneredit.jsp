@@ -9,13 +9,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>编辑内容</title>
+    <title>编辑Banner</title>
+
 </head>
+
 <body>
 
 <section class="content">
 
-    <form id="form" action="/admin/content/save?id=${content.id}" method="post" class="form-horizontal">
+    <form id="form" action="/admin/content/save?id=${banner.id}" method="post" class="form-horizontal">
         <div class="box box-solid">
             <div class="btn-group">
                 <button type="button" class="btn btn-default" onclick="history.back()">返回</button>
@@ -34,29 +36,29 @@
 
                             <label for="title" class="col-sm-2 control-label">标题：</label>
                             <div class="col-sm-9">
-                                <input id="title" name="title" class="form-control" value="${content.title}">
+                                <input id="title" name="title" class="form-control" value="${banner.title}">
                             </div>
                         </div>
 
                         <div class="form-group col-sm-7">
-                            <label for="isDisplay" class="col-sm-2 control-label">是否发布：</label>
+
+                            <label for="title" class="col-sm-2 control-label">URL：</label>
                             <div class="col-sm-9">
-                                <select id="isDisplay" name="isDisplay" class="form-control" value="${content.isDisplay}">
-                                    <option value="1">是</option>
-                                    <option value="0">否</option>
-                                </select>
+                                <input id="url" name="url" class="form-control" value="${banner.url}">
                             </div>
                         </div>
 
                         <div class="form-group col-sm-7">
-                            <label for="type" class="col-sm-2 control-label">类型：</label>
+
+                            <label for="upload" class="col-sm-2 control-label">图片：</label>
                             <div class="col-sm-9">
-                                <select id="type" name="type.id" class="form-control" value="${content.title}">
-                                    <c:forEach items="${typeList}" var="item">
-                                        <option value="${item.id}">${item.displayName}</option>
-                                    </c:forEach>
-                                </select>
+                                <input type="file" id="upload" name="upload" class="form-control">
+                                <input type="hidden" id="path" name="path">
                             </div>
+                        </div>
+
+                        <div class="col-xs-6 col-md-3">
+                            <img id="imageView" src="/resource/image/logo.png" alt="..." class="img-thumbnail">
                         </div>
 
                         <div class="form-group col-sm-7">
@@ -64,31 +66,46 @@
                             <label for="orderId" class="col-sm-2 control-label">排序：</label>
                             <div class="col-sm-9">
                                 <input id="orderId" name="orderId" type="number" class="form-control "
-                                       value="${content.orderId}">
-                            </div>
-                        </div>
-
-                        <div class="form-group col-sm-12">
-                            <div class="col-sm-12">
-                                <script id="container" name="content" style="height:500px;margin:0px auto;"
-                                        type="text/plain">${content.content}</script>
-                                <script src="/resource/ueditor/ueditor.config.js" type="text/javascript"></script>
-                                <script src="/resource/ueditor/ueditor.all.min.js" type="text/javascript"></script>
-                                <!-- 实例化编辑器 -->
-                                <script type="text/javascript">
-                                    var ue = UE.getEditor('container');
-                                    ue.setHeight(500);
-                                </script>
+                                       value="${banner.orderId}">
                             </div>
                         </div>
 
 
                     </div>
                 </div>
-
             </div>
         </div>
+        </div>
+        <script type="application/javascript" src="/resource/uploader/ajaxfileupload.js?t=2"></script>
+        <script>
 
+            var file_input_change = function () {
+
+                var files = $("#upload")[0].files;
+                if (files.length < 1) {
+                } else {
+                    upload();
+                }
+            }
+            $("#upload").change(file_input_change);
+            function upload() {
+                $.ajaxFileUpload({
+                    url: '/files/upload',//用于文件上传的服务器端请求的Action地址
+                    type: "post",//请求方法
+                    secureuri: false,//一般设置为false
+                    fileElementId: 'upload',//文件id属性
+                    dataType: "JSON",//返回值类型 一般设置为json,一定要大写,否则可能会出现一些bug
+                    success: function (msg) {
+                        var json = eval("(" + $(msg).text() + ")");
+                        $("#imageView").attr("src", json.localPath);
+                        $("#path").val(json.localPath);
+                    },
+                    error: function (data, status) {
+                    }
+                });
+                $("#upload").change(file_input_change);
+            }
+        </script>
     </form>
 </section>
 </body>

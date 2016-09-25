@@ -31,7 +31,7 @@
                 <div class="btn-group">
 
 
-                    <a href="/admin/contentType/edit" class="btn btn-default btn-sm checkbox-toggle"><i
+                    <a href="/admin/fistpage/banner/edit?id=0" class="btn btn-default btn-sm checkbox-toggle"><i
                             class="fa fa-plus"></i>新建</a>
                 </div><!-- /.btn-group -->
 
@@ -54,11 +54,11 @@
                         </tr>
                         <c:forEach items="${bannerList}" var="item">
                             <tr>
-                                <td><a href="/admin/banneredit/edit?id=${item.id}" class="btnView" title="${item.title}">${item.title}</a>&nbsp;</td>
+                                <td><a href="/admin/fistpage/banner/edit/?id=${item.id}" class="btnView" title="${item.title}">${item.title}</a>&nbsp;</td>
                                 <td>${item.url}</td>
                                 <td>${item.path}</td>
                                 <td>${item.orderId}</td>
-                                <td><a href="/admin/banneredit/delete?id=${item.id}">删除</a> </td>
+                                <td><a href="/admin/fistpage/banner/delete?id=${item.id}">删除</a> </td>
                             </tr>
                         </c:forEach>
                         </tbody>
