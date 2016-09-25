@@ -140,7 +140,7 @@
                         <li><a href="/admin/content/edit"><i class="fa fa-circle-o"></i> 添加内容</a></li>
                         <li><a href="/admin/contentType/list"><i class="fa fa-circle-o"></i> 内容类型列表</a></li>
                         <li><a href="/admin/contentType/edit"><i class="fa fa-circle-o"></i> 添加类型</a></li>
-                        <li><a href="/admin/fistpage/banner"><i class="fa fa-circle-o"></i> Banner列表</a></li>
+                        <li><a href="/admin/firstpage/banner"><i class="fa fa-circle-o"></i> Banner列表</a></li>
                     </ul>
                 </li>
             </ul>

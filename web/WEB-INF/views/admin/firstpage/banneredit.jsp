@@ -11,13 +11,19 @@
 <head>
     <title>编辑Banner</title>
 
+    <style>
+        .img-thumbnail{
+            max-height: 3px;
+            max-width: 50px;
+        }
+    </style>
 </head>
 
 <body>
 
 <section class="content">
 
-    <form id="form" action="/admin/content/save?id=${banner.id}" method="post" class="form-horizontal">
+    <form id="form" action="/admin/firstpage/save?id=${banner.id}" method="post" class="form-horizontal">
         <div class="box box-solid">
             <div class="btn-group">
                 <button type="button" class="btn btn-default" onclick="history.back()">返回</button>
@@ -58,7 +64,7 @@
                         </div>
 
                         <div class="col-xs-6 col-md-3">
-                            <img id="imageView" src="/resource/image/logo.png" alt="..." class="img-thumbnail">
+                            <img id="imageView" src="/resource/image/logo.png" alt="..." class="img-thumbnail" style=" max-height: 80px;max-width: 150px;">
                         </div>
 
                         <div class="form-group col-sm-7">

@@ -1,8 +1,6 @@
 package cn.dongyeshengzhen.portal.firstPage.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by dongye on 2016/9/24.
@@ -11,6 +9,7 @@ import javax.persistence.Table;
 @Table(name = "firstpage")
 public class FirstPage {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String url;
     private String path;

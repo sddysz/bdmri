@@ -30,12 +30,10 @@ public class FirstPageManager {
 
 
     public void save(FirstPage firstPage) {
-//        content.setCreateTime(new Date());
-//        if (content.getId() != null) {
-//            Content tempContent = firstPageDao.findOne(content.getId());
-//            content.setCreateTime(tempContent.getCreateTime());
-//        }
-//        content.setUpdateTime(new Date());
+        firstPage.setType("banner");
+        if (firstPage.getId() != null) {
+            FirstPage tempFirstPage = firstPageDao.findOne(firstPage.getId());
+        }
         firstPageDao.save(firstPage);
     }
 
@@ -53,4 +51,7 @@ public class FirstPageManager {
         return firstPageDao.findAll();
     }
 
+    public void delete(Integer id){
+        firstPageDao.delete(id);
+    }
 }
