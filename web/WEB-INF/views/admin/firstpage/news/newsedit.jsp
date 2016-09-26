@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>编辑Banner</title>
+    <title>编辑新闻预览</title>
 
     <style>
         .img-thumbnail{
@@ -23,7 +23,7 @@
 
 <section class="content">
 
-    <form id="form" action="/admin/firstpage/save?id=${banner.id}" method="post" class="form-horizontal">
+    <form id="form" action="/admin/firstpage/news/save?id=${news.id}" method="post" class="form-horizontal">
         <div class="box box-solid">
             <div class="btn-group">
                 <button type="button" class="btn btn-default" onclick="history.back()">返回</button>
@@ -42,15 +42,21 @@
 
                             <label for="title" class="col-sm-2 control-label">标题：</label>
                             <div class="col-sm-9">
-                                <input id="title" name="title" class="form-control" value="${banner.title}">
+                                <input id="title" name="title" class="form-control" value="${news.title}">
                             </div>
                         </div>
+                        <div class="form-group col-sm-7">
 
+                            <label for="text" class="col-sm-2 control-label">文本：</label>
+                            <div class="col-sm-9">
+                                <input id="text" name="text" class="form-control" value="${news.text}">
+                            </div>
+                        </div>
                         <div class="form-group col-sm-7">
 
                             <label for="title" class="col-sm-2 control-label">URL：</label>
                             <div class="col-sm-9">
-                                <input id="url" name="url" class="form-control" value="${banner.url}">
+                                <input id="url" name="url" class="form-control" value="${news.url}">
                             </div>
                         </div>
 
@@ -59,22 +65,15 @@
                             <label for="upload" class="col-sm-2 control-label">图片：</label>
                             <div class="col-sm-9">
                                 <input type="file" id="upload" name="upload" class="form-control">
-                                <input type="hidden" id="path" name="path">
+                                <input type="hidden" id="path" name="path" value="${news.path}">
                             </div>
                         </div>
 
                         <div class="col-xs-6 col-md-3">
-                            <img id="imageView" src="/resource/image/logo.png" alt="..." class="img-thumbnail" style=" max-height: 80px;max-width: 150px;">
+                            <img id="imageView" src="${news.path}" alt="请上传图片" class="img-thumbnail" style=" max-height: 80px;max-width: 150px;">
                         </div>
 
-                        <div class="form-group col-sm-7">
 
-                            <label for="orderId" class="col-sm-2 control-label">排序：</label>
-                            <div class="col-sm-9">
-                                <input id="orderId" name="orderId" type="number" class="form-control "
-                                       value="${banner.orderId}">
-                            </div>
-                        </div>
 
 
                     </div>

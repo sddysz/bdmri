@@ -31,7 +31,7 @@
                 <div class="btn-group">
 
 
-                    <a href="/admin/fistpage/banner/edit?id=0" class="btn btn-default btn-sm checkbox-toggle"><i
+                    <a href="/admin/firstpage/banner/edit?id=0" class="btn btn-default btn-sm checkbox-toggle"><i
                             class="fa fa-plus"></i>新建</a>
                 </div><!-- /.btn-group -->
 
@@ -48,17 +48,18 @@
                         <tr>
                             <th>名称</th>
                             <th>URL</th>
-                            <th>图片</th>
+                            <th>图片预览</th>
                             <th>排序值</th>
                             <th>操作</th>
                         </tr>
                         <c:forEach items="${bannerList}" var="item">
                             <tr>
-                                <td><a href="/admin/fistpage/banner/edit/?id=${item.id}" class="btnView" title="${item.title}">${item.title}</a>&nbsp;</td>
+                                <td>${item.title}</td>
                                 <td>${item.url}</td>
-                                <td>${item.path}</td>
+                                <td><a href="${item.path}"><img id="imageView" src="${item.path}" alt="请上传图片" class="img-thumbnail" style=" max-height: 40px;max-width: 60px;"></a></td>
                                 <td>${item.orderId}</td>
-                                <td><a href="/admin/fistpage/banner/delete?id=${item.id}">删除</a> </td>
+                                <td><a href="/admin/firstpage/banner/delete?id=${item.id}">删除</a>
+                                    <a href="/admin/firstpage/banner/edit?id=${item.id}">编辑</a></td>
                             </tr>
                         </c:forEach>
                         </tbody>
