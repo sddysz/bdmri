@@ -66,15 +66,14 @@
 <div class="footerbg">
     <div class="container footer">
         <img src="/resource/image/logo01.png">
-        <div style="margin-top:27px;">版权所有 广东创我科技发展有限公司 粤ICP备10060444号 Copyright 1997-2015 Creawor All Rights Reserved
+        <div style="margin-top:27px;">版权所有 	青岛贝特姆市场研究院有限公司  鲁ICP备15013205号-1 Copyright 2015-2016 Bdmri All Rights Reserved
             <br>
             <div style="margin-top:0;">
-                <img src="./创我科技_files/beian.png" style="margin-top: 0;">
-                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44049102496043"
+                <img src="/resource/image/beian.png" style="margin-top: 0;">
+                <a target="_blank" href="javascrip:void(0)"
                    style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img
-                        src="http://www.creawor.com/content.aspx?cateId=56" style="float:left;">
-                    <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">粤公网安备
-                        44049102496043号</p></a></div>
+                        src="" style="float:left;">
+                    <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">鲁ICP备15013205号-1</p></a></div>
         </div>
     </div>
 </div>
