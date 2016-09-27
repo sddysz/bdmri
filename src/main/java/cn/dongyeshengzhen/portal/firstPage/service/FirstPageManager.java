@@ -1,6 +1,5 @@
 package cn.dongyeshengzhen.portal.firstPage.service;
 
-import cn.dongyeshengzhen.portal.content.entity.Content;
 import cn.dongyeshengzhen.portal.firstPage.dao.FirstPageDao;
 import cn.dongyeshengzhen.portal.firstPage.entity.FirstPage;
 import cn.dongyeshengzhen.portal.firstPage.entity.FirstPageType;
@@ -9,10 +8,7 @@ import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
+import javax.persistence.criteria.*;
 import java.util.List;
 
 /**
@@ -51,6 +47,7 @@ public class FirstPageManager {
         criteriaQuery.select(root);
         Predicate condition = criteriaBuilder.equal(root.get("type"), type);
         criteriaQuery.where(condition);
+        criteriaQuery.orderBy(criteriaBuilder.asc(root.get("orderId")));
         return entityManager.createQuery(criteriaQuery).getResultList();
     }
 
