@@ -53,6 +53,7 @@
 
                             <th>更新时间</th>
                             <th>是否发布</th>
+                            <th>删除</th>
                         </tr>
                         <c:forEach items="${contentList}" var="item">
                             <tr>
@@ -63,7 +64,8 @@
                                 <td>${item.type.menu.displayName}</td>
                                 <td>${item.type.displayName}&nbsp;</td>
                                 <td>${item.updateTime}&nbsp;</td>
-                                <td>&nbsp;</td>
+                                <td><c:if test="${item.isDisplay eq 1}">是</c:if><c:if test="${item.isDisplay !=1}">否</c:if></td>
+                                <td><c:if test="${(item.isNews != 1)&&(item.isNews != 0)}"><a href="/admin/content/delete?id=${item.id}">删除</a></c:if></td>
                             </tr>
                         </c:forEach>
                         </tbody>

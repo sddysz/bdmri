@@ -6,6 +6,8 @@ import cn.dongyeshengzhen.portal.content.entity.Content;
 import cn.dongyeshengzhen.portal.content.entity.ContentType;
 import cn.dongyeshengzhen.portal.content.service.ContentManager;
 import cn.dongyeshengzhen.portal.content.service.ContentTypeManager;
+import cn.dongyeshengzhen.portal.news.entity.News;
+import cn.dongyeshengzhen.portal.news.service.NewsManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,16 +28,21 @@ public class ContentController {
     private ContentManager contentManager;
     @Autowired
     private ContentTypeManager contentTypeManager;
+    @Autowired
+    private NewsManager newsManager;
 
     //新闻动态
     @RequestMapping(value = "/infonews/{newsId}")
-    public String news( @PathVariable Integer newsId, Model model) {
-//        Content content = contentManager.findOne(id);
-//        List<Content> contentList = contentManager.findContents(content.getType());
-//        Menu menu = menuManager.findOne(nav);
-//        model.addAttribute("content", content);
-//        model.addAttribute("contentList", contentList);
-//        model.addAttribute("contentTypeList", menu.getContentTypeList());
+    public String news(  @PathVariable Integer newsId, Model model) {
+        News news = newsManager.findOne(newsId);
+
+        Content content = contentManager.findNewsContent(news.getType());
+        List<Content> contentList = contentManager.findContents(content.getType());
+        Menu menu = menuManager.findOne(content.getType().getMenu().getId());
+        model.addAttribute("content", content);
+        model.addAttribute("contentList", contentList);
+        model.addAttribute("contentTypeList", menu.getContentTypeList());
+        model.addAttribute("news", news);
         return "content";
     }
 

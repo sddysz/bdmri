@@ -142,6 +142,8 @@
                         <li><a href="/admin/contentType/edit"><i class="fa fa-circle-o"></i> 添加类型</a></li>
                         <li><a href="/admin/firstpage/banner"><i class="fa fa-circle-o"></i> Banner列表</a></li>
                         <li><a href="/admin/firstpage/news"><i class="fa fa-circle-o"></i> 新闻预览</a></li>
+                        <li><a href="/admin/news/list"><i class="fa fa-circle-o"></i> 新闻列表</a></li>
+                        <li><a href="/admin/news/edit"><i class="fa fa-circle-o"></i> 添加新闻</a></li>
                     </ul>
                 </li>
             </ul>

@@ -44,17 +44,17 @@
                                 <input id="name" name="name" class="form-control" value="${contentType.name}">
                             </div>
                         </div>
+                        <input type="hidden" name="isDisplay" class="form-control" value="1">
+                        <%--<div class="form-group col-sm-7">--%>
 
-                        <div class="form-group col-sm-7">
-
-                            <label for="isDisplay" class="col-sm-2 control-label">是否显示：</label>
-                            <div class="col-sm-9">
-                                <select id="isDisplay" name="isDisplay" class="form-control" value="${contentType.isDisplay}">
-                                    <option value="1" <c:if test="${contentType.isDisplay eq 1}">selected </c:if>  >是</option>
-                                    <option value="0"<c:if test="${contentType.isDisplay eq 0}">selected </c:if>>否</option>
-                                </select>
-                            </div>
-                        </div>
+                            <%--<label for="isDisplay" class="col-sm-2 control-label">是否显示：</label>--%>
+                            <%--<div class="col-sm-9">--%>
+                                <%--<select id="isDisplay" name="isDisplay" class="form-control" value="${contentType.isDisplay}">--%>
+                                    <%--<option value="1" <c:if test="${contentType.isDisplay eq 1}">selected </c:if>  >是</option>--%>
+                                    <%--<option value="0"<c:if test="${contentType.isDisplay eq 0}">selected </c:if>>否</option>--%>
+                                <%--</select>--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
                         <div class="form-group col-sm-7">
                             <label for="menuId" class="col-sm-2 control-label">所属菜单：</label>
                             <div class="col-sm-9">

@@ -42,7 +42,7 @@
                         <div class="form-group col-sm-7">
                             <label for="type" class="col-sm-2 control-label">类型：</label>
                             <div class="col-sm-9">
-                                <select id="type" name="type.id" class="form-control" value="${news.type}">
+                                <select id="type" name="type" class="form-control" value="${news.type}">
                                     <option value="0">新闻</option>
                                     <option value="1">动态</option>
                                 </select>

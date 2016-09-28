@@ -35,10 +35,23 @@ public class ContentManager {
         CriteriaQuery<Content> criteriaQuery = criteriaBuilder.createQuery(Content.class);
         Root<Content> root = criteriaQuery.from(Content.class);
         criteriaQuery.select(root);
-        Predicate condition = criteriaBuilder.equal(root.get("type").get("id"), type.getId());
+        Predicate condition1 = criteriaBuilder.equal(root.get("type").get("id"), type.getId());
+        Predicate condition2 = criteriaBuilder.equal(root.get("isDisplay"), 1);
+        Predicate condition=criteriaBuilder.and(condition1,condition2);
         criteriaQuery.where(condition);
+
         criteriaQuery.orderBy(criteriaBuilder.asc(root.get("orderId")), criteriaBuilder.desc(root.get("updateTime")));
         return entityManager.createQuery(criteriaQuery).getResultList();
+    }
+
+    public Content findNewsContent(Integer type) {
+        CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Content> criteriaQuery = criteriaBuilder.createQuery(Content.class);
+        Root<Content> root = criteriaQuery.from(Content.class);
+        criteriaQuery.select(root);
+        Predicate condition = criteriaBuilder.equal(root.get("isNews"), type);
+        criteriaQuery.where(condition);
+        return entityManager.createQuery(criteriaQuery).getResultList().get(0);
     }
 
     public void save(Content content) {
