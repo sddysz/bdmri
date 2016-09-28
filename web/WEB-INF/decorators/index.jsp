@@ -22,6 +22,7 @@
     <script type="text/javascript" src="/resource/js/common.js"></script>
     <script type="text/javascript" src="/resource/js/jquery.flexslider-min.js"></script>
     <script type="text/javascript" src="/resource/js/Marquee.js"></script>
+    <script type="text/javascript" src="/resource/plugins/moment/moment.min.js"></script>
     <sitemesh:head></sitemesh:head>
     <style>
         @media only screen and (max-width: 768px) {

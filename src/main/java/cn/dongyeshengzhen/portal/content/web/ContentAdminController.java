@@ -55,7 +55,7 @@ public class ContentAdminController {
     public String delete(RedirectAttributes redirectAttributes, Integer id) {
 
         redirectAttributes.addAttribute("message", contentManager.delete(id));
-        return "redirect:/admin/contentType/list";
+        return "redirect:/admin/content/list";
 
     }
 }

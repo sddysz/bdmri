@@ -27,15 +27,34 @@ public class ContentController {
     @Autowired
     private ContentTypeManager contentTypeManager;
 
+    //新闻动态
+    @RequestMapping(value = "/infonews/{newsId}")
+    public String news( @PathVariable Integer newsId, Model model) {
+//        Content content = contentManager.findOne(id);
+//        List<Content> contentList = contentManager.findContents(content.getType());
+//        Menu menu = menuManager.findOne(nav);
+//        model.addAttribute("content", content);
+//        model.addAttribute("contentList", contentList);
+//        model.addAttribute("contentTypeList", menu.getContentTypeList());
+        return "content";
+    }
+
+    //普通内容
     @RequestMapping(value = "/nav_{nav}/{contentType}/{id}")
     public String content(@PathVariable String nav, @PathVariable String contentType, @PathVariable Integer id, Model model) {
         Content content = contentManager.findOne(id);
         List<Content> contentList = contentManager.findContents(content.getType());
-                Menu menu = menuManager.findOne(nav);
+        Menu menu = menuManager.findOne(nav);
         model.addAttribute("content", content);
         model.addAttribute("contentList", contentList);
         model.addAttribute("contentTypeList", menu.getContentTypeList());
-        return "content";
+        if (content.getIsNews() != 0&&content.getIsNews() != 1) {
+
+            return "content";
+        } else {
+            model.addAttribute("type",content.getIsNews());
+            return "news";
+        }
     }
 
     @RequestMapping(value = "/nav_{nav}/{typeName}")
