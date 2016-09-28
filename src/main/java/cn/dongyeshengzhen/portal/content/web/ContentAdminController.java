@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 /**
  * Created by dongye on 2016/9/17.
@@ -47,6 +48,14 @@ public class ContentAdminController {
     public String save(Model model, Content content) {
         contentManager.save(content);
         return "redirect:/admin/content/list";
+
+    }
+
+    @RequestMapping(value = "delete")
+    public String delete(RedirectAttributes redirectAttributes, Integer id) {
+
+        redirectAttributes.addAttribute("message", contentManager.delete(id));
+        return "redirect:/admin/contentType/list";
 
     }
 }

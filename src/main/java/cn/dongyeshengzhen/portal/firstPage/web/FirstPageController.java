@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.List;
+
 /**
  * Created by dongye on 2016/9/3.
  */
@@ -25,8 +27,9 @@ public class FirstPageController {
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index(Model model) {
         model.addAttribute("banners", firstPageManager.findByType(FirstPageType.BANNER));
-        model.addAttribute("newsUp",firstPageManager.findByType(FirstPageType.NEWS).subList(0,3));
-        model.addAttribute("newsDown",firstPageManager.findByType(FirstPageType.NEWS).subList(3,6));
+        List news=firstPageManager.findByType(FirstPageType.NEWS);
+        model.addAttribute("newsUp",news.subList(0,3));
+        model.addAttribute("newsDown",news.subList(3,6));
         return "index";
     }
 }

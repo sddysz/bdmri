@@ -29,6 +29,7 @@ public class Menu {
     @OneToMany(fetch = FetchType.EAGER)
     @Fetch(FetchMode.SUBSELECT)//采用子查询抓取，避免1+n次查询
     @JoinColumn(name = "navId")
+    @OrderBy(value = "orderId ASC,updateTime DESC")
     List<ContentType> contentTypeList;
 
     public Integer getId() {

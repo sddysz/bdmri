@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="d" tagdir="/WEB-INF/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: dongye
@@ -12,7 +13,7 @@
     <title>内容列表</title>
 </head>
 <body>
-
+<d:message message="${message}"></d:message>
 <section class="content">
 
     <form id="form" action="" method="post" class="form-horizontal">

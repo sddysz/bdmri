@@ -1,5 +1,6 @@
 package cn.dongyeshengzhen.portal.admin.web;
 
+import cn.dongyeshengzhen.framework.model.MsgModel;
 import cn.dongyeshengzhen.framework.security.service.MenuManager;
 import cn.dongyeshengzhen.portal.content.entity.Content;
 import cn.dongyeshengzhen.portal.content.entity.ContentType;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 /**
  * Created by dongye on 2016/9/17.
@@ -46,14 +48,16 @@ public class ContentTypeAdminController {
     }
 
     @RequestMapping(value = "save")
-    public String save(Model model, ContentType contentType) {
-        contentTypeManager.save(contentType);
+    public String save(RedirectAttributes redirectAttributes, ContentType contentType) {
+        redirectAttributes.addAttribute("message", contentTypeManager.save(contentType));
         return "redirect:/admin/contentType/list";
 
     }
+
     @RequestMapping(value = "delete")
-    public String delete(Model model, Integer id) {
-        contentTypeManager.delete(id);
+    public String delete(RedirectAttributes redirectAttributes, Integer id) {
+        MsgModel msg = contentTypeManager.delete(id);
+        redirectAttributes.addFlashAttribute("message", msg);
         return "redirect:/admin/contentType/list";
 
     }

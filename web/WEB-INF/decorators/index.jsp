@@ -37,7 +37,7 @@
     </style>
 </head>
 <body bgcolor="#F0F0F0">
-<d:menu></d:menu>
+<dy:menu></dy:menu>
 
 
 <sitemesh:body></sitemesh:body>
@@ -50,7 +50,7 @@
 </div>
 <div class="frilinkbg">
     <div class="container frilink">
-        <d:footer></d:footer>
+        <dy:footer></dy:footer>
         <dl class="fri_r">
             <dt>
             <h1>联系我们</h1>
@@ -66,7 +66,7 @@
 <div class="footerbg">
     <div class="container footer">
         <img src="/resource/image/logo01.png">
-        <div style="margin-top:27px;">版权所有 	青岛贝特姆市场研究院有限公司  鲁ICP备15013205号-1 Copyright 2015-2016 Bdmri All Rights Reserved
+        <div style="margin-top:27px;">版权所有 	青岛贝特姆大数据研究院有限公司  鲁ICP备15013205号-1 Copyright 2015-2016 Bdmri All Rights Reserved
             <br>
             <div style="margin-top:0;">
                 <img src="/resource/image/beian.png" style="margin-top: 0;">

@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="d" tagdir="/WEB-INF/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: dongye
@@ -13,6 +14,7 @@
 </head>
 <body>
 
+<d:message message="${message}"></d:message>
 <section class="content">
 
     <form id="form" action="" method="post" class="form-horizontal">
@@ -53,10 +55,11 @@
                         </tr>
                         <c:forEach items="${contentTypeList}" var="item">
                             <tr>
-                                <td><a href="/admin/contentType/edit?id=${item.id}" class="btnView" title="${item.displayName}">${item.displayName}</a>&nbsp;</td>
+                                <td><a href="/admin/contentType/edit?id=${item.id}" class="btnView"
+                                       title="${item.displayName}">${item.displayName}</a>&nbsp;</td>
                                 <td>${item.name}</td>
                                 <td>${item.menu.displayName}</td>
-                                <td><a href="/admin/contentType/delete?id=${item.id}">删除</a> </td>
+                                <td><a href="/admin/contentType/delete?id=${item.id}">删除</a></td>
                             </tr>
                         </c:forEach>
                         </tbody>

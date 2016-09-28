@@ -1,16 +1,14 @@
 package cn.dongyeshengzhen.framework.security.web;
 
-import cn.dongyeshengzhen.framework.security.entity.MsgModel;
+import cn.dongyeshengzhen.framework.model.MsgModel;
 import cn.dongyeshengzhen.framework.security.entity.User;
 import cn.dongyeshengzhen.framework.security.service.UserManager;
 import cn.dongyeshengzhen.framework.security.shiro.ShiroUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 

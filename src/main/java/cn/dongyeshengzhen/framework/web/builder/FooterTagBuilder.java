@@ -57,7 +57,7 @@ public class FooterTagBuilder implements TagBuilder {
             hideMenuBuffer.append("<li>\n<h1>" + m.getDisplayName() + "</h1>");
             for (int j = 0; j < m.getContentTypeList().size(); j++) {
                 ContentType c = m.getContentTypeList().get(j);
-                hideMenuBuffer.append("<div><a href=\"nav_"+ m.getName() + "/" + c.getName() +"\">" + c.getDisplayName() + "</a></div>");
+                hideMenuBuffer.append("<div><a href=\"/nav_"+ m.getName() + "/" + c.getName() +"\">" + c.getDisplayName() + "</a></div>");
             }
             hideMenuBuffer.append("</li>");
             buffer.append(hideMenuBuffer);

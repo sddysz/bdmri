@@ -1,4 +1,4 @@
-package cn.dongyeshengzhen.framework.security.entity;
+package cn.dongyeshengzhen.framework.model;
 
 import java.util.HashMap;
 import java.util.List;
