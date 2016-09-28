@@ -1,7 +1,7 @@
 package cn.dongyeshengzhen.framework.web.taglib;
 
 import cn.dongyeshengzhen.framework.web.TagDTO;
-import cn.dongyeshengzhen.framework.web.builder.MenuTagBuilder;
+import cn.dongyeshengzhen.framework.web.taglib.builder.MenuTagBuilder;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.tags.RequestContextAwareTag;
 

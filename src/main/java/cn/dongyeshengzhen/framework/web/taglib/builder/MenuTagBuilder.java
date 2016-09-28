@@ -1,4 +1,4 @@
-package cn.dongyeshengzhen.framework.web.builder;
+package cn.dongyeshengzhen.framework.web.taglib.builder;
 
 import cn.dongyeshengzhen.framework.security.entity.Menu;
 import cn.dongyeshengzhen.framework.security.service.MenuManager;

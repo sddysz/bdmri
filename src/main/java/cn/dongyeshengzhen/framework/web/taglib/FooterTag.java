@@ -1,7 +1,7 @@
 package cn.dongyeshengzhen.framework.web.taglib;
 
 import cn.dongyeshengzhen.framework.web.TagDTO;
-import cn.dongyeshengzhen.framework.web.builder.FooterTagBuilder;
+import cn.dongyeshengzhen.framework.web.taglib.builder.FooterTagBuilder;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.tags.RequestContextAwareTag;
 

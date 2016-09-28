@@ -19,4 +19,52 @@
 		<tag-class>cn.dongyeshengzhen.framework.web.taglib.FooterTag</tag-class>
 		<body-content>JSP</body-content>
 	</tag>
+	<tag>
+		<description>分页控件.</description>
+		<name>page</name>
+		<tag-class>cn.dongyeshengzhen.framework.web.taglib.PageTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<description>总记录数</description>
+			<name>totalElements</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>总记页数</description>
+			<name>totalPages</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>当前页码</description>
+			<name>curPage</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>导出Url</description>
+			<name>exportUrl</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>查找</description>
+			<name>lookup</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<description>分页控件.</description>
+		<name>pageData</name>
+		<tag-class>cn.dongyeshengzhen.framework.web.taglib.PageDataTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<description>数据对象</description>
+			<name>data</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
 </taglib>
