@@ -61,6 +61,9 @@
             <div>微信号:qingdaobtm</div>
             <div>公司地址：青岛市市南区南京路2号绮丽大厦1502</div>
             </dt>
+            <dd>
+                <img src="/resource/image/ewm.jpg">
+            </dd>
         </dl>
     </div>
 </div>
