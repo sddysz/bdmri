@@ -32,6 +32,14 @@ public class NewsManager {
         return newsDao.findOne(id);
     }
 
+    public List<News> findDisplayNews() {
+        Page<News> page = findPage(1, null);
+        List<News> newsList = page.getContent();
+        if (page.getContent().size() > 5) {
+            newsList = page.getContent().subList(0, 5);
+        }
+        return newsList;
+    }
 
     public Page<News> findPage(Integer pageNumber, Integer type) {
         PageRequestModel pageRequestModel = new PageRequestModel();

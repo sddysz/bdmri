@@ -1,5 +1,7 @@
 package cn.dongyeshengzhen.portal.firstPage.service;
 
+import cn.dongyeshengzhen.portal.content.entity.Content;
+import cn.dongyeshengzhen.portal.content.service.ContentManager;
 import cn.dongyeshengzhen.portal.firstPage.dao.FirstPageDao;
 import cn.dongyeshengzhen.portal.firstPage.entity.FirstPage;
 import cn.dongyeshengzhen.portal.firstPage.entity.FirstPageType;
@@ -20,11 +22,19 @@ public class FirstPageManager {
     FirstPageDao firstPageDao;
     @PersistenceContext(unitName = "user_unit")
     protected EntityManager entityManager;
+    @Autowired
+    ContentManager contentManager;
 
     public FirstPage findOne(Integer id) {
         return firstPageDao.findOne(id);
     }
 
+    public String findNewsUrl(Integer type) {
+        Content content=contentManager.findNewsContent(type);
+        String url=content.getType().getMenu().getName()+"/"+content.getType().getName()+"/"+content.getId();
+
+        return "nav_"+url;
+    }
 
     public void saveBanner(FirstPage firstPage) {
         firstPage.setType(FirstPageType.BANNER);
@@ -33,14 +43,15 @@ public class FirstPageManager {
         }
         firstPageDao.save(firstPage);
     }
-    public void saveNews(FirstPage firstPage)  {
+
+    public void saveNews(FirstPage firstPage) {
         firstPage.setType(FirstPageType.NEWS);
-        FirstPage tempFirstPage=firstPageDao.findOne(firstPage.getId());
+        FirstPage tempFirstPage = firstPageDao.findOne(firstPage.getId());
         firstPage.setOrderId(tempFirstPage.getId());
         firstPageDao.save(firstPage);
     }
 
-    public List findByType(String type){
+    public List findByType(String type) {
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         CriteriaQuery<FirstPage> criteriaQuery = criteriaBuilder.createQuery(FirstPage.class);
         Root<FirstPage> root = criteriaQuery.from(FirstPage.class);
@@ -55,7 +66,7 @@ public class FirstPageManager {
         return firstPageDao.findAll();
     }
 
-    public void delete(Integer id){
+    public void delete(Integer id) {
         firstPageDao.delete(id);
     }
 }

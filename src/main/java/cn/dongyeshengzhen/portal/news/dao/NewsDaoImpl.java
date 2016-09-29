@@ -25,9 +25,10 @@ public class NewsDaoImpl implements NewsDaoExtend {
             @Override
             public Predicate toPredicate(Root<News> root, CriteriaQuery<?> cq, CriteriaBuilder cb) {
                 List<Predicate> predicates = new ArrayList<Predicate>();
-                Predicate p1 = cb.equal(root.get("type").as(Integer.class), type);
-                predicates.add(p1);
-
+                if (type != null) {
+                    Predicate p1 = cb.equal(root.get("type").as(Integer.class), type);
+                    predicates.add(p1);
+                }
                 Predicate[] p = new Predicate[predicates.size()];
                 cq.where(cb.and(predicates.toArray(p)));
                 cq.orderBy(cb.desc(root.get("createTime").as(Integer.class)));
