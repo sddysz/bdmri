@@ -49,7 +49,7 @@ public class ContentTypeAdminController {
 
     @RequestMapping(value = "save")
     public String save(RedirectAttributes redirectAttributes, ContentType contentType) {
-        redirectAttributes.addAttribute("message", contentTypeManager.save(contentType));
+        redirectAttributes.addFlashAttribute("msg", contentTypeManager.save(contentType));
         return "redirect:/admin/contentType/list";
 
     }
@@ -57,7 +57,7 @@ public class ContentTypeAdminController {
     @RequestMapping(value = "delete")
     public String delete(RedirectAttributes redirectAttributes, Integer id) {
         MsgModel msg = contentTypeManager.delete(id);
-        redirectAttributes.addFlashAttribute("message", msg);
+        redirectAttributes.addFlashAttribute("msg", msg);
         return "redirect:/admin/contentType/list";
 
     }

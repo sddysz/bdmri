@@ -54,7 +54,7 @@ public class ContentAdminController {
     @RequestMapping(value = "delete")
     public String delete(RedirectAttributes redirectAttributes, Integer id) {
 
-        redirectAttributes.addAttribute("message", contentManager.delete(id));
+        redirectAttributes.addFlashAttribute("msg", contentManager.delete(id));
         return "redirect:/admin/content/list";
 
     }

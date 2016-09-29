@@ -43,7 +43,7 @@ public class ContentController {
         model.addAttribute("contentList", contentList);
         model.addAttribute("contentTypeList", menu.getContentTypeList());
         model.addAttribute("news", news);
-        return "content";
+        return "newsdetail";
     }
 
     //普通内容

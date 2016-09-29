@@ -50,7 +50,7 @@ public class NewsAdminController {
     @RequestMapping(value = "delete")
     public String delete(RedirectAttributes redirectAttributes, Integer id) {
 
-        redirectAttributes.addAttribute("message", newsManager.delete(id));
+        redirectAttributes.addFlashAttribute("message", newsManager.delete(id));
         return "redirect:/admin/news/list";
 
     }

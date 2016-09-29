@@ -14,7 +14,6 @@
 </head>
 <body>
 
-<d:message message="${message}"></d:message>
 <section class="content">
 
     <form id="form" action="" method="post" class="form-horizontal">
