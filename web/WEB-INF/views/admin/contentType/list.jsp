@@ -51,7 +51,7 @@
                             <th>名称</th>
                             <th>URL名称</th>
                             <th>所属菜单</th>
-                            <th>操作</th>
+                            <th style="width: 60px">操作</th>
                         </tr>
                         <c:forEach items="${contentTypeList}" var="item">
                             <tr>

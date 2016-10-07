@@ -52,17 +52,16 @@
 <div class="frilinkbg">
     <div class="container frilink">
         <dy:footer></dy:footer>
-        <dl class="fri_r">
+        <dl class="fri_r" style="padding-left: 45px;width: 440px;">
             <dt>
             <h1>联系我们</h1>
             <div>联系电话：13361217116 </div>
-            <div>固定电话:0532-66888819 </div>
             <div>电子邮箱：<a style="color: white" href="mailto:QingDaoBDM@126.com">QingDaoBDM@126.com</a></div>
             <div>微信号:qingdaobtm</div>
             <div>公司地址：青岛市市南区南京路2号绮丽大厦1502</div>
             </dt>
             <dd>
-                <img src="/resource/image/ewm.jpg">
+                <img src="/resource/image/ewm.png">
             </dd>
         </dl>
     </div>

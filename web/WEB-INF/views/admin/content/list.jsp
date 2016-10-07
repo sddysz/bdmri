@@ -53,7 +53,7 @@
 
                             <th>更新时间</th>
                             <th>是否发布</th>
-                            <th>删除</th>
+                            <th style="width: 60px">删除</th>
                         </tr>
                         <c:forEach items="${contentList}" var="item">
                             <tr>
