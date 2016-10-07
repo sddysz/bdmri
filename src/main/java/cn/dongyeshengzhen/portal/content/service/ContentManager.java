@@ -60,6 +60,7 @@ public class ContentManager {
             Content tempContent = contentDao.findOne(content.getId());
             content.setCreateTime(tempContent.getCreateTime());
         }
+        content.setIsNews(-1);
         content.setUpdateTime(new Date());
         contentDao.save(content);
     }
