@@ -10,7 +10,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>内容类型列表</title>
+    <title>二级菜单</title>
 </head>
 <body>
 
@@ -19,7 +19,7 @@
     <form id="form" action="" method="post" class="form-horizontal">
         <div class="box box-solid">
             <div class="box-body no-padding">
-                <h2>内容列表</h2>
+                <h2>二级菜单列表</h2>
             </div>
         </div>
         <div class="box box-solid">

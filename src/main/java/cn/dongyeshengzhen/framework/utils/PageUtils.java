@@ -41,4 +41,8 @@ public class PageUtils {
         Page<T> page = new PageImpl<T>(result, pageable, totalElements);
         return page;
     }
+    public static <T> Page<T> getPageModel(List<T> result,Pageable pageable, int total) {
+        Page<T> page = new PageImpl<T>(result, pageable, total);
+        return page;
+    }
 }

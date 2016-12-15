@@ -4,6 +4,8 @@ import cn.dongyeshengzhen.portal.content.entity.Content;
 import cn.dongyeshengzhen.portal.content.service.ContentManager;
 import cn.dongyeshengzhen.portal.content.service.ContentTypeManager;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,10 +24,11 @@ public class ContentAdminController {
 
 
     @RequestMapping(value = "list")
-    public String edit(Model model) {
+    public String edit(Model model, Pageable pageable, String type) {
 
-        model.addAttribute("contentList", contentManager.findAll());
-
+        Page page = contentManager.findPage(type, pageable);
+        model.addAttribute("contentList", page.getContent());
+        model.addAttribute("page", page);
 
         return "admin/content/list";
     }

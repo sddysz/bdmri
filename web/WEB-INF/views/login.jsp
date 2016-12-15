@@ -23,6 +23,9 @@
 			<div class="sm_loginpasswordicon"></div>
 			<input type="password" name="password" class="sm_logininput">
 		</div>
+		<div style="color: #ff0000;">
+			${error}
+			</div>
 		<div class="sm_loginbuttn"><a id="btnSubmit" ><img src="/resource/login/images/loginbutton.jpg" onclick="submit()" width="100%" height="40" alt=""/></a></div>
 	</div>
 	<div class="sm_bgline"></div>

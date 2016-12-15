@@ -136,10 +136,10 @@
                 <li class="header"></li>
                 <li class="active treeview">
                     <ul class="treeview-menu">
-                        <li><a href="/admin/content/list"><i class="fa fa-circle-o"></i> 内容列表 v1</a></li>
+                        <li><a href="/admin/content/list"><i class="fa fa-circle-o"></i> 内容列表</a></li>
                         <li><a href="/admin/content/edit"><i class="fa fa-circle-o"></i> 添加内容</a></li>
-                        <li><a href="/admin/contentType/list"><i class="fa fa-circle-o"></i> 内容类型列表</a></li>
-                        <li><a href="/admin/contentType/edit"><i class="fa fa-circle-o"></i> 添加类型</a></li>
+                        <li><a href="/admin/contentType/list"><i class="fa fa-circle-o"></i> 二级菜单列表</a></li>
+                        <li><a href="/admin/contentType/edit"><i class="fa fa-circle-o"></i> 添加二级菜单</a></li>
                         <li><a href="/admin/firstpage/banner"><i class="fa fa-circle-o"></i> Banner列表</a></li>
                         <li><a href="/admin/firstpage/news"><i class="fa fa-circle-o"></i> 新闻预览</a></li>
                         <li><a href="/admin/news/list"><i class="fa fa-circle-o"></i> 新闻列表</a></li>
@@ -176,6 +176,13 @@
             $(".setting").dropdown("toggle");
             return false;
         }
+    });
+    $(function(){
+        $("[page-index]:not('.disabled')").click(function () {
+            var pageNo = $(this).attr("page-index");
+            $(":hidden[name=pageNumber]").val(pageNo);
+            $("#mainForm").submit();
+        });
     });
 </script>
 </html>

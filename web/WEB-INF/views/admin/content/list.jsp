@@ -1,5 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="d" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="dy" uri="http://www.dongyeshengzhen.cn/tags/form" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: dongye
@@ -15,7 +17,7 @@
 <body>
 <section class="content">
 
-    <form id="form" action="" method="post" class="form-horizontal">
+    <form id="mainForm" action="/admin/content/list" method="post" class="form-horizontal">
         <div class="box box-solid">
             <div class="box-body no-padding">
                 <h2>内容列表</h2>
@@ -69,7 +71,11 @@
                         </c:forEach>
                         </tbody>
                     </table><!-- /.table -->
+
                 </div><!-- /.mail-box-messages -->
+                <div class="box-footer ">
+                    <dy:pageData data="${page}"></dy:pageData>
+                </div>
             </div>
         </div>
 
